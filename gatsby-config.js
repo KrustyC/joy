@@ -17,17 +17,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-gdpr-cookies`,
-      options: {
-        googleAnalytics: {
-          trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-          cookieName: 'gatsby-gdpr-google-analytics', // default
-          anonymize: true // default
-        },
-        environments: ['production', 'development']
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
