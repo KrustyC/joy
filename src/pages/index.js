@@ -15,14 +15,14 @@ const IndexPage = () => (
   </>
 )
 
-// export const pageQuery = graphql`
-//   query GetHome {
-//     markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
-//       frontmatter {
-//         title
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query GetHome {
+    markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
+      frontmatter {
+        title
+      }
+    }
+  }
+`
 
 export default IndexPage

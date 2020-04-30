@@ -20,31 +20,11 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const links = [
-  {
-    text: "Home",
-    link: "/",
-  },
-  {
-    text: "Chi Siamo",
-    link: "/about",
-  },
-  {
-    text: "I Nostri Servizi",
-    link: "/i-nostri-servizi",
-  },
-  {
-    text: "Contatti",
-    link: "/contatti",
-  },
-]
-
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <InnerHeader>
-      {links.map(({ text, link }) => (
-        <StyledLink key={text} to={link}>{text}</StyledLink>
-      ))}
+      <StyledLink to="/">Home</StyledLink>
+      <StyledLink to="/about">About</StyledLink>
     </InnerHeader>
   </HeaderWrapper>
 )
