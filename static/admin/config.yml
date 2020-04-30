@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: master
+
+locale: "it"
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "pages"
+    label: "Pagine"
+    editor:
+      preview: false
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string",
+              default: "Chi Siamo",
+            }
+
+      - label: "About"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string",
+              default: "About",
+            }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Author Link", name: "link", widget: "string" }
+      - { label: "Description", name: "Description", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image"}
