@@ -9,5 +9,5 @@ This website uses Netlify CMS as a headless CMS, to let the final customer being
 
 ## Contribution
 
-## 💫 Deploy
+## 💫 Deploy [![Netlify Status](https://api.netlify.com/api/v1/badges/111f8a0a-92dc-4e53-b72d-066b9bcc9de3/deploy-status)](https://app.netlify.com/sites/sharp-kepler-744b66/deploys)
 This website is deployed through Netlify, on each push or merge into master. Netlify CMS also deploys all the text changes to the `content` folder.
