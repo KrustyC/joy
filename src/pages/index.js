@@ -5,9 +5,9 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
-    <h1>Ciao</h1>
-    <p>Lazzerini Rappresentanze.</p>
+    <SEO title="Home | Joy" />
+    <h1>Joy</h1>
+    <p>This is joy.</p>
 
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
@@ -15,14 +15,14 @@ const IndexPage = () => (
   </>
 )
 
-export const pageQuery = graphql`
-  query GetHome {
-    markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
-      frontmatter {
-        title
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query GetHome {
+//     markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `
 
 export default IndexPage
