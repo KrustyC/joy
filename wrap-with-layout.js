@@ -1,6 +1,6 @@
 import React from "react"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
-import Layout from "./src/components/Layout"
+import Layout from "./src/components/layout"
 
 const GlobalStyle = createGlobalStyle`
   
