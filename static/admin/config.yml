@@ -56,6 +56,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Author Link", name: "link", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "PDF", name: "manual_pdf", widget: "file" }
