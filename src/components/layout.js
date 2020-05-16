@@ -4,7 +4,7 @@ import { useCycle } from "framer-motion"
 import InitialOverlay from "./InitialOverlay"
 
 const Layout = ({ children }) => {
-  const [isVisible, onCycle] = useCycle(false, false)
+  const [isVisible, onCycle] = useCycle(true, false)
 
   return (
     <>

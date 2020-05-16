@@ -27,6 +27,7 @@ const Author = styled.span`
 
   b {
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 `
 
