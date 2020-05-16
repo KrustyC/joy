@@ -19,9 +19,12 @@ const InitialOverlayContainer = styled.div`
   z-index: 200;
   overflow: hidden;
 
-  svg {
-    height: 100% !important;
-    width: 100% !important;
+  > div {
+    width: 70vw !important;
+    height: 90vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 
