@@ -40,7 +40,7 @@ const InitialOverlay = ({ isVisible, onHide }) => {
           exit={{ opacity: 0 }}
         >
           <InitialOverlayContainer onClick={onHide}>
-            <Lottie options={defaultOptions} height="95%" width="95%" />
+            <Lottie options={defaultOptions} height="80%" width="80%" />
           </InitialOverlayContainer>
         </motion.div>
       )}

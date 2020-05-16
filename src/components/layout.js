@@ -8,8 +8,10 @@ import { useCycle } from "framer-motion"
 
 const MainWrapper = styled.div`
   min-height: 67vh;
-  max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};
+  width: 88vw;
+  /* max-width: ${({ theme }) => theme.sizes.desktop.centralColumn}; */
   margin: 0 auto;
+  /* background: red; */
 `
 
 const Layout = ({ children, path }) => {
