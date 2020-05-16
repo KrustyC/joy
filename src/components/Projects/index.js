@@ -7,7 +7,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 100px;
-  grid-row-gap: 50px;
+  grid-row-gap: 10px;
 `
 
 export const Projects = () => {
@@ -21,6 +21,7 @@ export const Projects = () => {
               description
               author
               image
+              manual_pdf
             }
           }
         }
@@ -45,6 +46,11 @@ export const Projects = () => {
             by <b>{project.author}</b>
           </Card.Author>
           <Card.Description>{project.description}</Card.Description>
+          <Card.Download>
+            <a href={project.manual_pdf} download>
+              Make
+            </a>
+          </Card.Download>
         </Card>
       ))}
       {projects.map(project => (
