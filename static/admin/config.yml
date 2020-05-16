@@ -16,12 +16,7 @@ collections:
         name: "home"
         file: "content/pages/home.md"
         fields:
-          - {
-              label: "Title",
-              name: "title",
-              widget: "string",
-              default: "Joy",
-            }
+          - { label: "Title", name: "title", widget: "string", default: "Joy" }
 
       - label: "About"
         name: "about"
@@ -32,6 +27,23 @@ collections:
               name: "title",
               widget: "string",
               default: "About",
+            }
+
+      - label: "Privacy Policy"
+        name: "privacy-policy"
+        file: "content/pages/privacy-policy.md"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string",
+              default: "Privacy Policy",
+            }
+          - {
+              label: "Text",
+              name: "text",
+              widget: "markdown",
+              default: "Lorem Ipsum",
             }
 
   - name: "projects"
@@ -46,4 +58,4 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Author Link", name: "link", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Image", name: "image", widget: "image" }
