@@ -19,7 +19,7 @@ export const Projects = () => {
           node {
             frontmatter {
               title
-              description
+              Description
               image
             }
           }
@@ -40,7 +40,7 @@ export const Projects = () => {
         <Card>
           <Card.Image src={project.image} />
           <Card.Title>{project.title}</Card.Title>
-          <Card.Description>{project.description}</Card.Description>
+          <Card.Description>{project.Description}</Card.Description>
         </Card>
       ))}
     </Grid>
