@@ -4,14 +4,14 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const HeaderWrapper = styled.div`
-  background: mediumaquamarine;
+  background: ${({ theme }) => theme.colors.primary};
   margin-bottom: 1.45rem;
 `
 
 const InnerHeader = styled.div`
   margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};
+  padding: 1.45rem 0;
 `
 
 const StyledLink = styled(Link)`

@@ -1,20 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    /* color: ${props => (props.theme === "purple" ? "purple" : "white")}; */
-  }
-`
+import InitialOverlay from "./InitialOverlay"
+import { useCycle } from "framer-motion"
 
 const MainWrapper = styled.div`
   min-height: 67vh;
+  max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};
   margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
 `
 
 const Layout = ({ children, path }) => {
@@ -28,17 +23,19 @@ const Layout = ({ children, path }) => {
     }
   `)
 
+  const [isVisible, onCycle] = useCycle(true, false)
+
   return (
     <>
-      <GlobalStyle theme="purple" />
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-
-        <MainWrapper>
-          <main>{children}</main>
-        </MainWrapper>
-        )}
-      </>
+      <InitialOverlay isVisible={isVisible} onHide={onCycle} />
+      {!isVisible && (
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <MainWrapper>
+            <main>{children}</main>
+          </MainWrapper>
+        </>
+      )}
     </>
   )
 }

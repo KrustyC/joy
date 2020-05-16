@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { Projects } from "../components/Projects"
 
 const IndexPage = () => (
   <>
@@ -9,9 +9,7 @@ const IndexPage = () => (
     <h1>Joy</h1>
     <p>This is joy.</p>
 
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    <Projects />
   </>
 )
 

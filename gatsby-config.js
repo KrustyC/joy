@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-portal`,
       options: {
-        key: 'portal',
-        id: 'portal',        
+        key: "initial-overlay-portal",
+        id: "initial-overlay-portal",
       },
     },
     {
