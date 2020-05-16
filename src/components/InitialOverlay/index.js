@@ -18,6 +18,11 @@ const InitialOverlayContainer = styled.div`
   align-items: center;
   z-index: 200;
   overflow: hidden;
+
+  svg {
+    height: 100% !important;
+    width: 100% !important;
+  }
 `
 
 const defaultOptions = {
