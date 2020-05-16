@@ -1,5 +1,5 @@
 ---
-title: Trial Project
+title: Mario Rossi
 author: Davide Crestini
 link: https://google.com
 Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -7,5 +7,6 @@ Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
   imperdiet. Aenean at eros commodo, consectetur risus sed, tincidunt urna.
   Nulla vel feugiat nisl, a ultrices nisi. Integer tempor lacus quis neque
   sodales, id sollicitudin urna dapibus.
+description: Ciao ciao ciaoci co Ciao ciao ciaoci co Ciao ciao ciaoci co v
 image: /img/thumb.png
 ---
