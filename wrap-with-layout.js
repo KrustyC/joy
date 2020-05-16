@@ -13,7 +13,7 @@ const theme = {
   },
   sizes: {
     desktop: {
-      centralColumn: "1200px",
+      mainArea: "88vw",
     },
   },
 }

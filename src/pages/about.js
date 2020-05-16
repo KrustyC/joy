@@ -1,6 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import styled from "styled-components"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
+
+const Main = styled.div`
+  width: ${({ theme }) => theme.sizes.desktop.mainArea};
+  margin: 0 auto;
+`
 
 const Partner = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter
@@ -9,8 +15,10 @@ const Partner = ({ data }) => {
     <>
       <SEO title="About" />
       <h1>{title}</h1>
-      <p>Welcome to about</p>
-      <Link to="/">Go back to the homepage</Link>
+      <Main>
+        <h1>Privacy Policy</h1>
+        <p>Lorem ipsum.</p>
+      </Main>
     </>
   )
 }
