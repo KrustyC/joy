@@ -6,7 +6,7 @@ import About from "./About"
 
 const HeaderWrapper = styled.div`
   height: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   display: flex;
   align-items: flex-end;
   justify-content: center;

@@ -6,7 +6,7 @@ import { Card } from "./Card.styled"
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 50px;
+  grid-column-gap: 100px;
   grid-row-gap: 50px;
 `
 
@@ -19,6 +19,7 @@ export const Projects = () => {
             frontmatter {
               title
               description
+              author
               image
             }
           }
@@ -35,8 +36,27 @@ export const Projects = () => {
     <Grid>
       {projects.map(project => (
         <Card>
-          <Card.Image src={project.image} />
+          <Card.ImageContainer>
+            <Card.ImageContainer.Image src={project.image} />
+          </Card.ImageContainer>
+
           <Card.Title>{project.title}</Card.Title>
+          <Card.Author>
+            by <b>{project.author}</b>
+          </Card.Author>
+          <Card.Description>{project.description}</Card.Description>
+        </Card>
+      ))}
+      {projects.map(project => (
+        <Card>
+          <Card.ImageContainer>
+            <Card.ImageContainer.Image src={project.image} />
+          </Card.ImageContainer>
+
+          <Card.Title>{project.title}</Card.Title>
+          <Card.Author>
+            by <b>{project.author}</b>
+          </Card.Author>
           <Card.Description>{project.description}</Card.Description>
         </Card>
       ))}

@@ -3,19 +3,39 @@ import styled from "styled-components"
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 50%;
+  align-items: flex-start;
+  justify-content: flex-start;
+`
+
+const ImageContainer = styled.div`
+  margin-bottom: 15px;
+  height: 230px;
 `
 
 const Image = styled.img`
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 `
 
-const Title = styled.h3``
+const Title = styled.h3`
+  margin: 5px 0;
+`
+
+const Author = styled.span`
+  font-size: 14px;
+
+  b {
+    text-transform: uppercase;
+  }
+`
+
 const Description = styled.p``
 
-Card.Image = Image
+ImageContainer.Image = Image
+Card.ImageContainer = ImageContainer
 Card.Title = Title
+Card.Author = Author
 Card.Description = Description
 
 export { Card }
