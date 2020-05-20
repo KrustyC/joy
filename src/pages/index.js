@@ -18,8 +18,8 @@ const Main = styled.div`
 const IndexPage = () => (
   <>
     <SEO title="Home | Joy" />
-    <Header />
     <Wrapper>
+      <Header />
       <Main>
         <Projects />
       </Main>

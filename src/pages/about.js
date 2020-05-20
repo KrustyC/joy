@@ -8,7 +8,7 @@ const Main = styled.div`
   margin: 0 auto;
 `
 
-const Partner = ({ data }) => {
+const About = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter
 
   return (
@@ -33,4 +33,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Partner
+export default About
