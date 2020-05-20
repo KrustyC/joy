@@ -1,4 +1,4 @@
 import HomeHeader from "./HomeHeader"
-import AboutHeader from "./AboutHeader"
+import GeneralHeader from "./GeneralHeader"
 
-export { HomeHeader, AboutHeader }
+export { HomeHeader, GeneralHeader }

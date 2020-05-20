@@ -3,7 +3,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import React from "react"
 
-const AboutHeaderWrapper = styled.div`
+const GeneralHeaderWrapper = styled.div`
   background: ${({ theme }) => theme.colors.primary};
   height: 200px;
   margin-bottom: 1.45rem;
@@ -13,7 +13,7 @@ const AboutHeaderWrapper = styled.div`
   justify-content: center;
 `
 
-const InnerAboutHeader = styled.div`
+const InnerGeneralHeader = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
   display: flex;
   background: yellow;
@@ -29,21 +29,21 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const AboutHeader = ({ siteTitle }) => (
-  <AboutHeaderWrapper>
-    <InnerAboutHeader>
+const GeneralHeader = ({ siteTitle }) => (
+  <GeneralHeaderWrapper>
+    <InnerGeneralHeader>
       <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-    </InnerAboutHeader>
-  </AboutHeaderWrapper>
+      <StyledLink to="/General">General</StyledLink>
+    </InnerGeneralHeader>
+  </GeneralHeaderWrapper>
 )
 
-AboutHeader.propTypes = {
+GeneralHeader.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-AboutHeader.defaultProps = {
+GeneralHeader.defaultProps = {
   siteTitle: ``,
 }
 
-export default AboutHeader
+export default GeneralHeader
