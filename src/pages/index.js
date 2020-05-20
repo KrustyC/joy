@@ -4,20 +4,27 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { HomeHeader as Header } from "../components/Headers"
 import { Projects } from "../components/Projects"
+import { Footer } from "../components/Footer"
 
+const Wrapper = styled.div`
+  background: white;
+`
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
   margin: 0 auto;
+  margin-bottom: 50px;
 `
 
 const IndexPage = () => (
   <>
     <SEO title="Home | Joy" />
     <Header />
-
-    <Main>
-      <Projects />
-    </Main>
+    <Wrapper>
+      <Main>
+        <Projects />
+      </Main>
+      <Footer />
+    </Wrapper>
   </>
 )
 
