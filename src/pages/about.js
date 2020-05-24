@@ -6,7 +6,7 @@ import { GeneralHeader as Header } from "../components/Headers"
 import { Footer } from "../components/Footer"
 
 const Wrapper = styled.div`
-  background: #ffc74a;
+  background: ${({ theme }) => theme.colors.aboutPage};
 `
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
@@ -21,7 +21,7 @@ const About = ({ data }) => {
     <>
       <SEO title="About" />
       <Wrapper>
-        <Header />
+        <Header uploadADesignLink />
         <Main>This is the about page mate</Main>
         <Footer />
       </Wrapper>

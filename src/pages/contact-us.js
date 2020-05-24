@@ -6,7 +6,7 @@ import { ContactForm } from "../components/ContactForm"
 import { Footer } from "../components/Footer"
 
 const Wrapper = styled.div`
-  background: #ff958c;
+  background: ${({ theme }) => theme.colors.contactUsPage};
 `
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
@@ -32,7 +32,6 @@ const From = () => {
           <Text>
             Everything that you upload here will be posted on Instagram and used
             to make a printable version of the instructions!
-            succhiami
           </Text>
           <ContactForm />
         </Main>

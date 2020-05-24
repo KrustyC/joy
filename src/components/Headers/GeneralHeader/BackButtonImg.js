@@ -11,9 +11,9 @@ const Image = styled(Img)`
 const BackButtonImg = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-icon.png" }) {
+      placeholderImage: file(relativePath: { eq: "back-button.png" }) {
         childImageSharp {
-          fixed(width: 80) {
+          fixed(width: 50) {
             ...GatsbyImageSharpFixed
           }
         }

@@ -6,7 +6,7 @@ import { Markdown } from "../components/Markdown"
 import { Footer } from "../components/Footer"
 
 const Wrapper = styled.div`
-  background: #b8cdf8;
+  background: ${({ theme }) => theme.colors.privacyPolicyPage};
 `
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};

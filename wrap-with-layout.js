@@ -10,6 +10,9 @@ const theme = {
   colors: {
     primary: "#9D8DF1",
     text: "#5A5A5A",
+    aboutPage: "#ffc74a",
+    privacyPolicyPage: "##b8cdf8",
+    contactUsPage: "#ff958c",
   },
   sizes: {
     desktop: {

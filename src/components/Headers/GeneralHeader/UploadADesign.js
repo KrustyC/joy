@@ -5,15 +5,15 @@ import Img from "gatsby-image"
 
 const Image = styled(Img)`
   width: 100px;
-  height: 80px;
+  height: 190px;
 `
 
-const EyeButtonImg = () => {
+const UploadADesign = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-icon.png" }) {
+      placeholderImage: file(relativePath: { eq: "upload-button.png" }) {
         childImageSharp {
-          fixed(width: 80) {
+          fixed(width: 90) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -23,4 +23,4 @@ const EyeButtonImg = () => {
   return <Image fixed={data.placeholderImage.childImageSharp.fixed} />
 }
 
-export default EyeButtonImg
+export default UploadADesign

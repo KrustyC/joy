@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Logo from "./Logo"
 import BackButtonImg from "./BackButtonImg"
-import EyeButtonImg from "./EyeButtonImg"
+import UploadADesign from "./UploadADesign"
 
 const GeneralHeaderWrapper = styled.div`
   height: 150px;
@@ -30,18 +30,15 @@ const LeftLink = styled(Link)`
 const RightSide = styled.div`
   display: flex;
   justify-content: flex-end;
-
-  background: green;
 `
 
 const RightSideLink = styled(Link)`
   flex: 1;
   display: flex;
-  background: red;
   flex-direction: column;
   min-width: 120px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -51,29 +48,21 @@ const RightSideLink = styled(Link)`
     text-decoration: none;
     color: black;
   }
-
-  span {
-    font-size: 16px;
-    color: black;
-    font-weight: bold;
-  }
 `
 
-const GeneralHeader = ({ siteTitle, linkConf }) => (
+const GeneralHeader = ({ siteTitle, uploadADesignLink }) => (
   <GeneralHeaderWrapper>
     <InnerGeneralHeader>
       <LeftLink to="/">
         <Logo />
       </LeftLink>
       <RightSide>
-        {linkConf && (
-          <RightSideLink to={linkConf.to}>
-            <span>{linkConf.label}</span>
-            <EyeButtonImg />
+        {uploadADesignLink && (
+          <RightSideLink to="/contact-us">
+            <UploadADesign />
           </RightSideLink>
         )}
         <RightSideLink to="../">
-          <span>back</span>
           <BackButtonImg />
         </RightSideLink>
       </RightSide>
