@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Logo from "./Logo"
+import BackButtonImg from "./BackButtonImg"
+import EyeButtonImg from "./EyeButtonImg"
 
 const GeneralHeaderWrapper = styled.div`
   height: 150px;
@@ -22,21 +24,59 @@ const InnerGeneralHeader = styled.div`
 const LeftLink = styled(Link)`
   display: flex;
   justify-content: flex-start;
+  flex: 1;
 `
 
-const RightLink = styled(Link)`
-  flex: 1;
+const RightSide = styled.div`
   display: flex;
   justify-content: flex-end;
+
+  background: green;
 `
 
-const GeneralHeader = ({ siteTitle }) => (
+const RightSideLink = styled(Link)`
+  flex: 1;
+  display: flex;
+  background: red;
+  flex-direction: column;
+  min-width: 120px;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:active,
+  :focus,
+  :visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  span {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+`
+
+const GeneralHeader = ({ siteTitle, linkConf }) => (
   <GeneralHeaderWrapper>
     <InnerGeneralHeader>
       <LeftLink to="/">
         <Logo />
       </LeftLink>
-      <RightLink to="/about">Somethin</RightLink>
+      <RightSide>
+        {linkConf && (
+          <RightSideLink to={linkConf.to}>
+            <span>{linkConf.label}</span>
+            <EyeButtonImg />
+          </RightSideLink>
+        )}
+        <RightSideLink to="../">
+          <span>back</span>
+          <BackButtonImg />
+        </RightSideLink>
+      </RightSide>
     </InnerGeneralHeader>
   </GeneralHeaderWrapper>
 )

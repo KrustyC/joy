@@ -2,10 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import { GeneralHeader as Header } from "../components/Headers"
+import { Footer } from "../components/Footer"
 
+const Wrapper = styled.div`
+  background: #ffc74a;
+`
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
   margin: 0 auto;
+  margin-bottom: 50px;
 `
 
 const About = ({ data }) => {
@@ -14,11 +20,11 @@ const About = ({ data }) => {
   return (
     <>
       <SEO title="About" />
-      <h1>{title}</h1>
-      <Main>
-        <h1>Privacy Policy</h1>
-        <p>Lorem ipsum.</p>
-      </Main>
+      <Wrapper>
+        <Header />
+        <Main>This is the about page mate</Main>
+        <Footer />
+      </Wrapper>
     </>
   )
 }

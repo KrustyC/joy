@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { Card } from "./Card.styled"
+import Icon from "./Icon"
 
 const Grid = styled.div`
   display: grid;
@@ -48,7 +49,7 @@ export const Projects = () => {
           <Card.Description>{project.description}</Card.Description>
           <Card.Download>
             <a href={project.manual_pdf} download>
-              Make
+              <Icon /> Make
             </a>
           </Card.Download>
         </Card>

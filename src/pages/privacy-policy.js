@@ -6,7 +6,7 @@ import { Markdown } from "../components/Markdown"
 import { Footer } from "../components/Footer"
 
 const Wrapper = styled.div`
-  background: mediumaquamarine;
+  background: #b8cdf8;
 `
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
@@ -25,7 +25,7 @@ const PrivacyPolicyPage = ({ data }) => {
     <>
       <SEO title="Privacy Policy" />
       <Wrapper>
-        <Header />
+        <Header linkConf={{ to: "/contact-us", label: "contact us" }} />
         <Main>
           <h1>{title}</h1>
           <Text>

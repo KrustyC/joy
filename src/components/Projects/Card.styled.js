@@ -49,8 +49,14 @@ const Download = styled.p`
   font-weight: bold;
 
   a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: black;
+
+    >:first-child {
+      margin-right: 5px;
+    }
   }
 `
 

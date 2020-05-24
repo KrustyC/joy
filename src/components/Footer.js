@@ -31,15 +31,15 @@ const Links = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
-`
 
-const StyledLink = styled(Link)`
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
+  > a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 
-  &:first-of-type {
-    margin-right: 50px;
+    &:first-of-type {
+      margin-right: 50px;
+    }
   }
 `
 
@@ -51,8 +51,14 @@ export const Footer = () => (
         <span>spreadonejoy@gmail.com</span>
       </Copy>
       <Links>
-        <StyledLink href="">Instagram</StyledLink>
-        <StyledLink to="/privacy-policy">Privacy Policy</StyledLink>
+        <a
+          href="https://instagram.com"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <Link to="/privacy-policy">Privacy Policy</Link>
       </Links>
     </InnerFooter>
   </FooterContainer>
