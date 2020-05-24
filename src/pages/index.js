@@ -17,7 +17,7 @@ const Main = styled.div`
 
 const IndexPage = () => (
   <>
-    <SEO title="Home | Joy" />
+    <SEO title="Home" />
     <Wrapper>
       <Header />
       <Main>
