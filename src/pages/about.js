@@ -1,42 +1,33 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { GeneralHeader as Header } from "../components/Headers"
+import { AboutComponent } from "../components/About"
 import { Footer } from "../components/Footer"
 
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.aboutPage};
 `
+
 const Main = styled.div`
-  width: ${({ theme }) => theme.sizes.desktop.mainArea};
+  max-width: ${({ theme }) => theme.sizes.desktop.mainArea};
   margin: 0 auto;
   margin-bottom: 50px;
 `
 
-const About = ({ data }) => {
-  const { title } = data.markdownRemark.frontmatter
-
+const About = () => {
   return (
     <>
       <SEO title="About" />
       <Wrapper>
         <Header uploadADesignLink />
-        <Main>This is the about page mate</Main>
+        <Main>
+          <AboutComponent />
+        </Main>
         <Footer />
       </Wrapper>
     </>
   )
 }
-
-export const pageQuery = graphql`
-  query GetAbout {
-    markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
-      frontmatter {
-        title
-      }
-    }
-  }
-`
 
 export default About
