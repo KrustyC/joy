@@ -2,9 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
-import { ImageMidLeft1, ImageMidRight1, ImageMidRight2 } from "./AboutImages"
-
-console.log(ImageMidLeft1)
+import { ImageMidLeft, ImageMidRight1, ImageMidRight2 } from "./AboutImages"
 
 const Title = styled.h1`
   font-size: 54px;
@@ -15,11 +13,12 @@ const Title = styled.h1`
 `
 
 const Text = styled.p`
-  font-size: 14px;
-  max-width: 300px;
+  font-size: 16px;
+  max-width: 450px;
   flex: 1;
   display: flex;
   flex-direction: column;
+  flex: 1;
 `
 
 const Plus = styled(Link)`
@@ -29,17 +28,26 @@ const Plus = styled(Link)`
   color: black !important;
   text-decoration: none;
   margin: 30px 0;
+  flex: 1;
 `
 
 const LeftImages = styled.div`
   width: 100%;
   display: flex;
+  height: 370px;
+  flex: 8;
+  align-items: center;
+
+  img {
+    height: auto !important;
+  }
 `
 
 const LeftLeftImageContainer = styled.div`
   display: flex;
   flex: 1;
   margin-right: 30px;
+  margin-top: 40px;
 `
 
 const LeftRightImagesContainer = styled.div`
@@ -48,11 +56,14 @@ const LeftRightImagesContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  margin-top: 40px;
 `
 
 const RightImages = styled.div`
   width: 100%;
+  height: 370px;
   display: flex;
+  flex: 8;
 `
 
 const RightLeftImageContainer = styled.div`
@@ -67,21 +78,23 @@ const RightRightImageContainer = styled.div`
 export const MidSection = () => (
   <Section css="margin-bottom: 0 !important">
     <SectionLeft>
+      {/* <div> */}
       <Title>You upload</Title>
       <Text>
         A picture of your finished design with its name, a brief story and up to
         4 instruction photos to build it.
       </Text>
+      {/* </div> */}
       <LeftImages>
         <LeftLeftImageContainer>
-          <ImageMidLeft1 />
+          <ImageMidLeft />
         </LeftLeftImageContainer>
 
         <LeftRightImagesContainer>
-          <ImageMidLeft1 />
-          <ImageMidLeft1 />
-          <ImageMidLeft1 />
-          <ImageMidLeft1 />
+          <ImageMidLeft />
+          <ImageMidLeft />
+          <ImageMidLeft />
+          <ImageMidLeft />
         </LeftRightImagesContainer>
       </LeftImages>
       <Plus to="/contact-us">+</Plus>

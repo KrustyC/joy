@@ -1,4 +1,6 @@
-export * from "./ImageMidLeft1"
+export * from "./ImageMidLeft"
 export * from "./ImageMidRight1"
 export * from "./ImageMidRight2"
 export * from "./ImageBottomLeft1"
+export * from "./ImageBottomRight1"
+export * from "./ImageBottomRight2"

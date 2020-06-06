@@ -5,13 +5,13 @@ import Img from "gatsby-image"
 
 const Image = styled(Img)`
   width: 100%;
-  height: 100%;
+  height: auto !important;
 `
 
-export const ImageMidLeft1 = () => {
+export const ImageMidLeft = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "about-mid-left-1.png" }) {
+      placeholderImage: file(relativePath: { eq: "about-mid-left.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid

@@ -13,7 +13,7 @@ export const ImageMidRight2 = () => {
     query {
       placeholderImage: file(relativePath: { eq: "about-mid-right-2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 450) {
             ...GatsbyImageSharpFluid
           }
         }

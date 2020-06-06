@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
-import { ImageMidLeft1, ImageBottomLeft1 } from "./AboutImages"
+import { ImageBottomLeft1, ImageBottomRight1, ImageBottomRight2 } from "./AboutImages"
 
-console.log(ImageMidLeft1)
+console.log(ImageBottomRight1)
 
 const Text = styled.p`
-  font-size: 14px;
-  max-width: 300px;
+  font-size: 16px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
 `
@@ -51,11 +51,11 @@ export const BottomSection = () => (
       </Text>
       <RightImages>
         <RightLeftImageContainer>
-          <ImageMidLeft1 />
+          <ImageBottomRight1 />
         </RightLeftImageContainer>
 
         <RightRightImageContainer>
-          <ImageMidLeft1 />
+          <ImageBottomRight2 />
         </RightRightImageContainer>
       </RightImages>
     </SectionRight>
