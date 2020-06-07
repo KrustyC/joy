@@ -2,11 +2,11 @@ import { useFormik } from "formik"
 import * as Yup from "yup"
 
 const initialValues = {
-  name: "ddd",
+  name: "",
   website: "",
   instagram: "",
-  designName: "dd",
-  description: "ddd",
+  designName: "",
+  description: "",
   blueprint: "",
   privacyPolicy: false,
 }
@@ -17,7 +17,7 @@ const validationSchema = Yup.object({
     "Please add a link in the form of http://example.com"
   ),
   instagram: Yup.string().url(
-    "Please add a n instagram link in the form of http://instagram.com/yourId"
+    "Please add a n instagram link in the form of http://instagram.com/username"
   ),
   designName: Yup.string().required("Please add a name for your design"),
   description: Yup.string().required(

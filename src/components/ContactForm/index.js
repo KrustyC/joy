@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { PictureUpload } from "./PictureUpload"
-import { Field, Formik } from "formik"
 import {
   Form,
   Top,
@@ -15,6 +14,7 @@ import {
   PrivacyPolicy,
   MultipleImagesWrapper,
   TextAreaWrapper,
+  ErrorMessage,
   TextArea,
   TextAreaBottom,
 } from "./Form.styled"
@@ -25,7 +25,7 @@ export const ContactForm = () => {
   const [state, onSubmit] = useNetlifyForm()
   const contactForm = useContactForm(onSubmit)
 
-  const { values, isValid } = contactForm
+  const { values, isValid, errors, touched } = contactForm
 
   return (
     <Form
@@ -43,6 +43,9 @@ export const ContactForm = () => {
             name="name"
             {...contactForm.getFieldProps("name")}
           />
+          {errors.name && touched.name && (
+            <ErrorMessage>{errors.name}</ErrorMessage>
+          )}
         </FormGroup>
       </Top>
 
@@ -55,6 +58,9 @@ export const ContactForm = () => {
             name="website"
             {...contactForm.getFieldProps("website")}
           />
+          {errors.website && touched.website && (
+            <ErrorMessage>{errors.website}</ErrorMessage>
+          )}
         </FormGroup>
       </Top>
 
@@ -67,6 +73,9 @@ export const ContactForm = () => {
             name="instagram"
             {...contactForm.getFieldProps("instagram")}
           />
+          {errors.instagram && touched.instagram && (
+            <ErrorMessage>{errors.instagram}</ErrorMessage>
+          )}
         </FormGroup>
       </Top>
 
@@ -83,6 +92,9 @@ export const ContactForm = () => {
             {...contactForm.getFieldProps("designName")}
           />
         </FormGroup>
+        {errors.designName && touched.designName && (
+          <ErrorMessage>{errors.designName}</ErrorMessage>
+        )}
       </Sidebar>
 
       <Sidebar align="bottom">
@@ -110,6 +122,9 @@ export const ContactForm = () => {
             />
             <TextAreaBottom>{values.description.length}/260</TextAreaBottom>
           </TextAreaWrapper>
+          {errors.description && touched.description && (
+            <ErrorMessage>{errors.description}</ErrorMessage>
+          )}
         </FormGroup>
 
         <FormGroup css="justify-content: flex-end;">
@@ -162,6 +177,10 @@ export const ContactForm = () => {
           I have read and accepted the&nbsp;
           <Link to="/privacy-policy"> privacy policy</Link>
         </PrivacyPolicy>
+        {errors.privacyPolicy && touched.privacyPolicy && (
+          <ErrorMessage>{errors.privacyPolicy}</ErrorMessage>
+        )}
+
         <Submit type="submit" disabled={!isValid || state.pending}>
           Upload Design
         </Submit>

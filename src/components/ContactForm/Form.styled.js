@@ -120,6 +120,11 @@ export const PrivacyPolicy = styled.div`
   }
 `
 
+export const ErrorMessage = styled.span`
+  color: white;
+  font-size: 16px;
+`
+
 export const Submit = styled.button`
   background: black;
   color: white;

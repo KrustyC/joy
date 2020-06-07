@@ -38,7 +38,7 @@ const useNetlifyForm = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState)
 
   const onSubmit = async values => {
-    console.log("submoittt")
+    console.log("submoittt", values)
     dispatch({ type: "pending", payload: true })
 
     try {
@@ -53,7 +53,9 @@ const useNetlifyForm = () => {
 
       await fetch("/", options)
       dispatch({ type: "success", payload: true })
+      console.log("succsss", error)
     } catch (error) {
+      console.log("error", error)
       dispatch({
         type: "error",
         payload: "Oops! An error happened, please try again later!",
