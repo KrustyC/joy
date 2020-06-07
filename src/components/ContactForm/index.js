@@ -34,6 +34,7 @@ export const ContactForm = () => {
       data-netlify-honeypot="bot-field"
       onSubmit={contactForm.handleSubmit}
     >
+      <input type="hidden" name="form-name" value="contact" />
       <Top align="left">
         <FormGroup>
           <Label htmlFor="name">Your Name</Label>

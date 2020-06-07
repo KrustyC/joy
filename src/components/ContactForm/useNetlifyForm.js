@@ -53,7 +53,7 @@ const useNetlifyForm = () => {
 
       await fetch("/", options)
       dispatch({ type: "success", payload: true })
-      console.log("succsss", error)
+      console.log("succsss")
     } catch (error) {
       console.log("error", error)
       dispatch({
