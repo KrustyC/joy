@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const FormGrid = styled.div`
+export const Form = styled.form`
   margin-top: 100px;
   display: grid;
   grid-row-gap: 80px;
@@ -30,6 +30,9 @@ export const Sidebar = styled(BaseArea)`
 
 export const Main = styled(BaseArea)`
   grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 `
 
 export const Bottom = styled(BaseArea)`
@@ -42,8 +45,6 @@ export const FormGroup = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: space-between;
-  justify-content: flex-start;
 `
 
 export const Label = styled.label`
@@ -94,6 +95,7 @@ export const MultipleImagesWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  justify-self: flex-end;
 
   > div {
     flex: 1;
@@ -128,4 +130,8 @@ export const Submit = styled.button`
   text-transform: uppercase;
   width: 100%;
   height: 40px;
+
+  &:disabled {
+    opacity: 0.6;
+  }
 `
