@@ -29,12 +29,14 @@ export const ContactForm = () => {
 
   return (
     <Form
-      name="contact"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      // name="contact"
+      // data-netlify="true"
+      // data-netlify-honeypot="bot-field"
       onSubmit={contactForm.handleSubmit}
     >
+      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
       <input type="hidden" name="form-name" value="contact" />
+
       <Top align="left">
         <FormGroup>
           <Label htmlFor="name">Your Name</Label>
