@@ -42,15 +42,12 @@ const Img = styled.img`
 
 export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
   <Container>
-    {!file && <Text>+</Text>}
-
-    {file && <Img src={URL.createObjectURL(file)} />}
+    {!file ? <Text>+</Text> : <Img src={URL.createObjectURL(file)} />}
 
     <input
       id={fieldName}
       name={fieldName}
       type="file"
-      // style={{ display: "none" }}
       onChange={event => {
         setFieldValue(fieldName, event.currentTarget.files[0])
       }}

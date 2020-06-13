@@ -146,16 +146,32 @@ export const ContactForm = () => {
           </Label>
           <MultipleImagesWrapper>
             <div>
-              <PictureUpload />
+              <PictureUpload
+                file={values.buildPicture1}
+                fieldName="buildPicture1"
+                setFieldValue={setFieldValue}
+              />
             </div>
             <div>
-              <PictureUpload />
+              <PictureUpload
+                file={values.buildPicture2}
+                fieldName="buildPicture2"
+                setFieldValue={setFieldValue}
+              />
             </div>
             <div>
-              <PictureUpload />
+              <PictureUpload
+                file={values.buildPicture3}
+                fieldName="buildPicture3"
+                setFieldValue={setFieldValue}
+              />
             </div>
             <div>
-              <PictureUpload />
+              <PictureUpload
+                file={values.buildPicture4}
+                fieldName="buildPicture4"
+                setFieldValue={setFieldValue}
+              />
             </div>
           </MultipleImagesWrapper>
         </FormGroup>
