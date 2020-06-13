@@ -25,7 +25,7 @@ export const ContactForm = () => {
   const [state, onSubmit] = useNetlifyForm()
   const contactForm = useContactForm(onSubmit)
 
-  const { values, isValid, errors, touched } = contactForm
+  const { values, isValid, errors, touched, setFieldValue } = contactForm
 
   return (
     <Form
@@ -111,7 +111,11 @@ export const ContactForm = () => {
             Upload a picture of <br />
             your finished design
           </Label>
-          <PictureUpload />
+          <PictureUpload
+            file={values.mainPicture}
+            fieldName="mainPicture"
+            setFieldValue={setFieldValue}
+          />
         </FormGroup>
       </Sidebar>
 

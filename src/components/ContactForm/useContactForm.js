@@ -6,6 +6,7 @@ const initialValues = {
   website: "",
   instagram: "",
   designName: "",
+  mainPicture: null,
   description: "",
   blueprint: "",
   privacyPolicy: false,

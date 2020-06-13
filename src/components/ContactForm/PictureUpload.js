@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Container = styled.div`
+const Container = styled.label`
   position: relative;
   width: 100%;
   border: 3px solid black;
@@ -25,8 +25,32 @@ const Text = styled.span`
   color: ${({ theme }) => theme.colors.contactUsPage};
 `
 
-export const PictureUpload = ({ size }) => (
-  <Container>
-    <Text>+</Text>
-  </Container>
+const Img = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+
+export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
+  console.log(file),
+  (
+    <Container>
+      {!file && <Text>+</Text>}
+
+      {file && <Img src={URL.createObjectURL(file)} />}
+
+      <input
+        id="file"
+        name="file"
+        type="file"
+        style={{ display: "none" }}
+        onChange={event => {
+          setFieldValue(fieldName, event.currentTarget.files[0])
+        }}
+      />
+    </Container>
+  )
 )

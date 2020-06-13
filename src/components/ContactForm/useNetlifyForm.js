@@ -51,9 +51,10 @@ const useNetlifyForm = () => {
         }),
       }
 
+      console.log("submittt", options)
+
       await fetch("/", options)
       dispatch({ type: "success", payload: true })
-      console.log("succsss")
     } catch (error) {
       console.log("error", error)
       dispatch({
