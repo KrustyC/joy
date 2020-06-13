@@ -41,8 +41,8 @@ export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
     {file && <Img src={URL.createObjectURL(file)} />}
 
     <input
-      id="file"
-      name="file"
+      id={fieldName}
+      name={fieldName}
       type="file"
       // style={{ display: "none" }}
       onChange={event => {
