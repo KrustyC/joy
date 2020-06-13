@@ -44,7 +44,7 @@ const useNetlifyForm = () => {
     try {
       const options = {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        // headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": "contact",
           ...values,
