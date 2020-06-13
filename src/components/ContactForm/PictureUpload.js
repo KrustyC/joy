@@ -10,6 +10,12 @@ const Container = styled.label`
   align-items: center;
   justify-content: center;
   padding-top: 100%;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 `
 
 const Text = styled.span`
