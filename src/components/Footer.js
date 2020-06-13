@@ -8,6 +8,8 @@ const FooterContainer = styled.div`
   justify-content: center;
   height: 100px;
   margin-top: 100px;
+
+  font-size: 16px;
 `
 
 const InnerFooter = styled.div`
@@ -23,8 +25,13 @@ const Copy = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  > :first-of-type {
-    margin-right: 50px;
+  > :not(:last-child) {
+    margin-right: 40px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
   }
 `
 
@@ -39,7 +46,7 @@ const Links = styled.div`
     text-decoration: none;
 
     &:first-of-type {
-      margin-right: 50px;
+      margin-right: 40px;
     }
   }
 `
@@ -49,11 +56,19 @@ export const Footer = () => (
     <InnerFooter>
       <Copy>
         <span>2020 Planet Joy</span>
-        <span>spreadonejoy@gmail.com</span>
+        <span>
+          <a href="mailto:spreadonejoy@gmail.com">spreadonejoy@gmail.com</a>
+        </span>
+        <span>
+          Built by{" "}
+          <a href="https://dcrestini.me" rel="noopener noreferrer">
+            Davide Crestini
+          </a>
+        </span>
       </Copy>
       <Links>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/the_planetjoy/"
           target="blank"
           rel="noopener noreferrer"
         >

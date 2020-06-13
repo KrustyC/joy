@@ -2,7 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
-import { ImageMidLeft, ImageMidRight1, ImageMidRight2 } from "./AboutImages"
+import {
+  ImageMidLeft,
+  ImageMidLeft1,
+  ImageMidLeft2,
+  ImageMidLeft3,
+  ImageMidLeft4,
+  ImageMidRight1,
+  ImageMidRight2,
+} from "./AboutImages"
 
 const Title = styled.h1`
   font-size: 54px;
@@ -91,10 +99,10 @@ export const MidSection = () => (
         </LeftLeftImageContainer>
 
         <LeftRightImagesContainer>
-          <ImageMidLeft />
-          <ImageMidLeft />
-          <ImageMidLeft />
-          <ImageMidLeft />
+          <ImageMidLeft1 />
+          <ImageMidLeft2 />
+          <ImageMidLeft3 />
+          <ImageMidLeft4 />
         </LeftRightImagesContainer>
       </LeftImages>
       <Plus to="/contact-us">+</Plus>

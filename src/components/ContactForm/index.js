@@ -19,17 +19,18 @@ import {
   TextAreaBottom,
   LoadingStatus,
 } from "./Form.styled"
+import { SuccessStatus } from "./SuccessStatus"
 import useNetlifyForm from "./useNetlifyForm"
 import useContactForm from "./useContactForm"
 
 export const ContactForm = () => {
   const [state, onSubmit] = useNetlifyForm()
   const contactForm = useContactForm(onSubmit)
-  console.log(state)
+
   const { values, isValid, errors, touched, setFieldValue } = contactForm
 
   if (state.success) {
-    return <div>Success</div>
+    return <SuccessStatus />
   }
 
   return (
@@ -186,7 +187,7 @@ export const ContactForm = () => {
         <Label htmlFor="blueprint" css="max-width: 700px;">
           If you have a blueprint of your design, upload it here as PDF or JPEG.
           Please make sure the document is clear and{" "}
-          <u>it fits in A4 with 1.5cm margins :)</u> ?
+          <u>it fits in A4 with 1.5cm margins</u> ?
         </Label>
         <Input
           id="blueprint"

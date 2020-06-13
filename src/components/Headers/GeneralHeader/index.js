@@ -62,7 +62,7 @@ const GeneralHeader = ({ siteTitle, uploadADesignLink }) => (
             <UploadADesign />
           </RightSideLink>
         )}
-        <RightSideLink to="../">
+        <RightSideLink to="/">
           <BackButtonImg />
         </RightSideLink>
       </RightSide>
