@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <InitialOverlay isVisible={isVisible} onHide={onCycle} />
-      {!isVisible && <>{children}</>}
+      <>{children}</>
     </>
   )
 }
