@@ -44,7 +44,7 @@ export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
       id="file"
       name="file"
       type="file"
-      style={{ display: "none" }}
+      // style={{ display: "none" }}
       onChange={event => {
         setFieldValue(fieldName, event.currentTarget.files[0])
       }}
