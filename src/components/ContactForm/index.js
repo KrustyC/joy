@@ -17,6 +17,7 @@ import {
   ErrorMessage,
   TextArea,
   TextAreaBottom,
+  LoadingStatus,
 } from "./Form.styled"
 import useNetlifyForm from "./useNetlifyForm"
 import useContactForm from "./useContactForm"
@@ -24,8 +25,12 @@ import useContactForm from "./useContactForm"
 export const ContactForm = () => {
   const [state, onSubmit] = useNetlifyForm()
   const contactForm = useContactForm(onSubmit)
-
+  console.log(state)
   const { values, isValid, errors, touched, setFieldValue } = contactForm
+
+  if (state.success) {
+    return <div>Success</div>
+  }
 
   return (
     <Form
@@ -210,7 +215,16 @@ export const ContactForm = () => {
         )}
 
         <Submit type="submit" disabled={!isValid || state.pending}>
-          Upload Design
+          {!state.pending ? (
+            "Upload Design"
+          ) : (
+            <LoadingStatus>
+              <div />
+              <div />
+              <div />
+              <div />
+            </LoadingStatus>
+          )}
         </Submit>
       </Bottom>
     </Form>
