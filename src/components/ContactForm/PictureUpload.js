@@ -35,22 +35,19 @@ const Img = styled.img`
 `
 
 export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
-  console.log(file),
-  (
-    <Container>
-      {!file && <Text>+</Text>}
+  <Container>
+    {!file && <Text>+</Text>}
 
-      {file && <Img src={URL.createObjectURL(file)} />}
+    {file && <Img src={URL.createObjectURL(file)} />}
 
-      <input
-        id="file"
-        name="file"
-        type="file"
-        style={{ display: "none" }}
-        onChange={event => {
-          setFieldValue(fieldName, event.currentTarget.files[0])
-        }}
-      />
-    </Container>
-  )
+    <input
+      id="file"
+      name="file"
+      type="file"
+      style={{ display: "none" }}
+      onChange={event => {
+        setFieldValue(fieldName, event.currentTarget.files[0])
+      }}
+    />
+  </Container>
 )

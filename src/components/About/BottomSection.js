@@ -3,8 +3,6 @@ import styled from "styled-components"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
 import { ImageBottomLeft1, ImageBottomRight1, ImageBottomRight2 } from "./AboutImages"
 
-console.log(ImageBottomRight1)
-
 const Text = styled.p`
   font-size: 16px;
   max-width: 450px;
