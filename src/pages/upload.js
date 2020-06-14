@@ -19,7 +19,7 @@ const Main = styled.div`
 const From = () => {
   return (
     <>
-      <SEO title="Contact Us" />
+      <SEO title="Upload a Design" />
       <Wrapper>
         <Header />
         <Main>

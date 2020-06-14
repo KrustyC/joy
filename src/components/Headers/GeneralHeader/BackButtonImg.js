@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Image = styled(Img)`
-  width: 100px;
-  height: 80px;
+  /* width: 100px;
+  height: 80px; */
 `
 
 const BackButtonImg = () => {

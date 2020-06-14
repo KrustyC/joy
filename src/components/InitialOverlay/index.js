@@ -30,11 +30,6 @@ const InitialOverlayContainer = styled.div`
   }
 `
 
-const Text = styled.p`
-  font-size: 14px;
-  text-align: center;
-`
-
 const InitialOverlay = ({ isVisible, onHide }) => {
   return (
     <AnimatePresence>
@@ -58,22 +53,14 @@ const InitialOverlay = ({ isVisible, onHide }) => {
               />
             ) : (
               <Lottie
-                height={"100%"}
-                width="100%"
+                height={"70%"}
+                width="70%"
                 options={{
                   loop: true,
                   autoplay: true,
                   animationData: mobileAnimationData,
                 }}
               />
-            )}
-
-            {isMobile && (
-              <Text>
-                Hi, the mobile version of Joy is currently under development.
-                <br />
-                Please use a PC to view the website :)
-              </Text>
             )}
           </InitialOverlayContainer>
         </motion.div>

@@ -51,8 +51,8 @@ module.exports = {
         name: `Joy`,
         short_name: `joy`,
         start_url: `/`,
-        background_color: `#24E16E`,
-        theme_color: `#24E16E`,
+        background_color: `#9D8DF1`,
+        theme_color: `#9D8DF1`,
         display: `minimal-ui`,
         icon: `src/images/tab-icon.png`, // This path is relative to the root of the site.
       },

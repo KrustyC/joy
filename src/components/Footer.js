@@ -61,7 +61,11 @@ export const Footer = () => (
         </span>
         <span>
           built by{" "}
-          <a href="https://dcrestini.me" rel="noopener noreferrer">
+          <a
+            href="https://dcrestini.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Davide Crestini
           </a>
         </span>

@@ -13,7 +13,7 @@ const UploadADesign = () => {
     query {
       placeholderImage: file(relativePath: { eq: "upload-button.png" }) {
         childImageSharp {
-          fixed(width: 90) {
+          fixed(width: 95) {
             ...GatsbyImageSharpFixed
           }
         }
