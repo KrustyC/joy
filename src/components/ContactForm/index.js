@@ -266,8 +266,10 @@ export const ContactForm = () => {
               type="checkbox"
               {...contactForm.getFieldProps("privacyPolicy")}
             />{" "}
-            I have read and accepted the&nbsp;
-            <Link to="/privacy-policy"> privacy policy</Link>
+            <p>
+              I have read and accepted the&nbsp;
+              <Link to="/privacy-policy">privacy policy</Link>
+            </p>
           </PrivacyPolicy>
           {errors.privacyPolicy && touched.privacyPolicy && (
             <ErrorMessage>{errors.privacyPolicy}</ErrorMessage>

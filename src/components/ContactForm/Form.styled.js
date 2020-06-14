@@ -99,8 +99,7 @@ export const TextAreaBottom = styled.div`
   margin-top: -15px;
 `
 
-export const MultipleImagesWrapperWrapper = styled.div`
-`
+export const MultipleImagesWrapperWrapper = styled.div``
 
 export const MultipleImagesWrapper = styled.div`
   width: 50%;
@@ -121,12 +120,18 @@ export const PrivacyPolicy = styled.div`
   height: 50px;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 20px;
+
   input {
     margin-right: 8px;
   }
-  a {
-    color: black !important;
+
+  p {
+    line-height: 13px;
+    a {
+      color: black !important;
+    }
   }
 `
 
