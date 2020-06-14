@@ -3,13 +3,13 @@ import styled from "styled-components"
 
 const Container = styled.label`
   position: relative;
-  width: 100%;
+  width: 180px;
+  min-height: 245px;
   border: 3px solid black;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100%;
 
   input {
     opacity: 0;
@@ -31,16 +31,15 @@ const Text = styled.span`
   color: ${({ theme }) => theme.colors.contactUsPage};
 `
 
-const Img = styled.img`
+const Embed = styled.embed`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 `
 
-export const PictureUpload = ({
+export const FileUpload = ({
   file,
   fieldName,
   setFieldValue,
@@ -48,12 +47,24 @@ export const PictureUpload = ({
   ...rest
 }) => (
   <Container {...rest}>
-    {!file ? <Text>+</Text> : <Img src={URL.createObjectURL(file)} />}
+    {!file ? (
+      <Text>+</Text>
+    ) : (
+      <Embed
+        src={URL.createObjectURL(file)}
+        type="application/pdf"
+        frameBorder="0"
+        scrolling="auto"
+        height="100%"
+        width="100%"
+      />
+    )}
 
     <input
       id={fieldName}
       name={fieldName}
       type="file"
+      accept=".pdf"
       onChange={event => setFieldValue(fieldName, event.currentTarget.files[0])}
       onBlur={() => onBlur && onBlur()}
     />

@@ -57,7 +57,7 @@ export const FormGroup = styled.div`
 export const Label = styled.label`
   font-size: 26px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 30px !important;
   margin-bottom: 10px;
 `
 
@@ -99,10 +99,14 @@ export const TextAreaBottom = styled.div`
   margin-top: -15px;
 `
 
-export const MultipleImagesWrapperWrapper = styled.div``
+export const ImagesAndBlueprintWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+`
 
 export const MultipleImagesWrapper = styled.div`
-  width: 50%;
+  width: 75%;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -148,7 +152,7 @@ export const Submit = styled.button`
   padding: 0;
   letter-spacing: 3px;
   text-transform: uppercase;
-  width: 100%;
+  width: 350px;
   height: 40px;
 
   display: flex;

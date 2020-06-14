@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { PictureUpload } from "./PictureUpload"
+import { FileUpload } from "./FileUpload"
 import {
   Text,
   Form,
@@ -14,7 +15,7 @@ import {
   Submit,
   PrivacyPolicy,
   MultipleImagesWrapper,
-  MultipleImagesWrapperWrapper,
+  ImagesAndBlueprintWrapper,
   TextAreaWrapper,
   ErrorMessage,
   TextArea,
@@ -170,13 +171,16 @@ export const ContactForm = () => {
             )}
           </FormGroup>
 
-          <FormGroup css="justify-content: flex-end;">
-            <Label htmlFor="multiplePictures">
-              Upload up to 4 pictures of how to build your design. They will be
-              used as instructions, so make them as clear as you can!
-            </Label>
-            <MultipleImagesWrapperWrapper>
-              <MultipleImagesWrapper>
+          {/* <FormGroup css="flex-direction: column; justify-content: flex-end;"> */}
+          <ImagesAndBlueprintWrapper>
+            <FormGroup css="flex: 2; height: 100%;">
+              <Label
+                htmlFor="multiplePictures"
+                css="width: 350px; margin-top: -20px;"
+              >
+                Upload up to 8 clear pictures of how to build your design!
+              </Label>
+              <MultipleImagesWrapper css="margin-top: 20px;">
                 <div>
                   <PictureUpload
                     file={values.buildPicture1}
@@ -235,25 +239,23 @@ export const ContactForm = () => {
                   />
                 </div>
               </MultipleImagesWrapper>
-            </MultipleImagesWrapperWrapper>
-          </FormGroup>
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="blueprint" css="margin-top: -20px;">
+                If your design has a template, upload it as PDF in A4 format.
+              </Label>
+              <div style={{ marginTop: "20px" }}>
+                <FileUpload
+                  file={values.blueprint}
+                  fieldName="blueprint"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+            </FormGroup>
+          </ImagesAndBlueprintWrapper>
         </Main>
 
         <Bottom align="left">
-          <Label htmlFor="blueprint" css="max-width: 700px;">
-            If you have a blueprint of your design, upload it here as PDF or
-            JPEG. Please make sure the document is clear and{" "}
-            <u>it fits in A4 with 1.5cm margins</u> ?
-          </Label>
-          <Input
-            id="blueprint"
-            type="text"
-            name="blueprint"
-            {...contactForm.getFieldProps("blueprint")}
-          />
-        </Bottom>
-
-        <Bottom align="right">
           <Label as="span">
             We will publish your design as soon as possible.
           </Label>
