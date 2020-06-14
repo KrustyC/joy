@@ -87,7 +87,14 @@ text: >-
   If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
 
 
-  GDPR Data Protection Rights We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
+
+
+
+
+  **GDPR Data Protection Rights** 
+
+
+  We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
 
 
   The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.
