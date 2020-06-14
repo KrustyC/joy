@@ -25,7 +25,7 @@ const PrivacyPolicyPage = ({ data }) => {
     <>
       <SEO title="Privacy Policy" />
       <Wrapper>
-        <Header linkConf={{ to: "/contact-us", label: "contact us" }} />
+        <Header linkConf={{ to: "/upload", label: "contact us" }} />
         <Main>
           <h1>{title}</h1>
           <Text>

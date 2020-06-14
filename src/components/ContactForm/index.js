@@ -179,6 +179,35 @@ export const ContactForm = () => {
                 setFieldValue={setFieldValue}
               />
             </div>
+
+            <div>
+              <PictureUpload
+                file={values.buildPicture4}
+                fieldName="buildPicture4"
+                setFieldValue={setFieldValue}
+              />
+            </div>
+            <div>
+              <PictureUpload
+                file={values.buildPicture4}
+                fieldName="buildPicture4"
+                setFieldValue={setFieldValue}
+              />
+            </div>
+            <div>
+              <PictureUpload
+                file={values.buildPicture4}
+                fieldName="buildPicture4"
+                setFieldValue={setFieldValue}
+              />
+            </div>
+            <div>
+              <PictureUpload
+                file={values.buildPicture4}
+                fieldName="buildPicture4"
+                setFieldValue={setFieldValue}
+              />
+            </div>
           </MultipleImagesWrapper>
         </FormGroup>
       </Main>

@@ -8,6 +8,7 @@ const FooterContainer = styled.div`
   justify-content: center;
   height: 100px;
   margin-top: 100px;
+  font-weight: 700;
 
   font-size: 16px;
 `
@@ -42,7 +43,6 @@ const Links = styled.div`
 
   > a {
     color: black;
-    font-weight: bold;
     text-decoration: none;
 
     &:first-of-type {

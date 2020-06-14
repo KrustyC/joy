@@ -31,7 +31,8 @@ const From = () => {
         <Main>
           <Text>
             Everything that you upload here will be posted on Instagram and used
-            to make a printable version of the instructions!
+            to make a printable version of the instructions! Make sure
+            everything fits within 10MB.
           </Text>
           <ContactForm />
         </Main>

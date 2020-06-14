@@ -58,6 +58,7 @@ export const Input = styled.input`
   border: 3px solid black;
   width: 100%;
   height: 40px;
+  font-size: 20px;
 `
 
 export const TextAreaWrapper = styled.div`
@@ -73,7 +74,7 @@ export const TextArea = styled.textarea`
   height: 40px;
   resize: none;
   height: 100px;
-  font-size: 16px;
+  font-size: 20px;
   padding: 5px;
 `
 
@@ -93,9 +94,13 @@ export const TextAreaBottom = styled.div`
 
 export const MultipleImagesWrapper = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  justify-self: flex-end;
+  height: 50%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
   > div {
     flex: 1;

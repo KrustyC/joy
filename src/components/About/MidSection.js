@@ -105,7 +105,7 @@ export const MidSection = () => (
           <ImageMidLeft4 />
         </LeftRightImagesContainer>
       </LeftImages>
-      <Plus to="/contact-us">+</Plus>
+      <Plus to="/upload">+</Plus>
     </SectionLeft>
 
     <SectionRight>
@@ -122,7 +122,7 @@ export const MidSection = () => (
           <ImageMidRight2 />
         </RightRightImageContainer>
       </RightImages>
-      <Plus to="/contact-us">+</Plus>
+      <Plus to="/upload">+</Plus>
     </SectionRight>
   </Section>
 )

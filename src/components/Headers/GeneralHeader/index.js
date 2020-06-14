@@ -58,7 +58,7 @@ const GeneralHeader = ({ siteTitle, uploadADesignLink }) => (
       </LeftLink>
       <RightSide>
         {uploadADesignLink && (
-          <RightSideLink to="/contact-us">
+          <RightSideLink to="/upload">
             <UploadADesign />
           </RightSideLink>
         )}
