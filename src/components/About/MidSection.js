@@ -9,10 +9,6 @@ import {
   ImageMidLeft2,
   ImageMidLeft3,
   ImageMidLeft4,
-  ImageMidLeft5,
-  ImageMidLeft6,
-  ImageMidLeft7,
-  ImageMidLeft8,
 } from "./AboutImages"
 import animationData from "./animation.json"
 
@@ -26,24 +22,20 @@ const Title = styled.h1`
 
 const Text = styled.p`
   max-width: 350px;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
 `
 
 const Plus = styled(Link)`
   font-size: 40px;
-  flex: 1;
   font-weight: 200;
   color: black !important;
   text-decoration: none;
-  margin: 30px 0;
-  flex: 1;
+  margin-top: 30px;
 `
 
 const LeftImages = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   height: 370px;
   flex: 8;
@@ -58,16 +50,14 @@ const LeftLeftImageContainer = styled.div`
   display: flex;
   flex: 1;
   margin-right: 10px;
-  margin-top: 30px;
 `
 
 const LeftRightImagesContainer = styled.div`
   display: grid;
-  flex: 2;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  margin-top: 30px;
 `
 
 const RightImages = styled.div`
@@ -91,7 +81,7 @@ const defaultOptions = {
 }
 
 export const MidSection = () => (
-  <Section css="margin-top: 100px !important; margin-bottom: 0 !important">
+  <Section css="margin-top: 100px !important; margin-bottom: 50px !important; ">
     <SectionLeft>
       <Title>You upload</Title>
       <Text>
@@ -109,10 +99,6 @@ export const MidSection = () => (
           <ImageMidLeft2 />
           <ImageMidLeft3 />
           <ImageMidLeft4 />
-          <ImageMidLeft5 />
-          <ImageMidLeft6 />
-          <ImageMidLeft7 />
-          <ImageMidLeft8 />
         </LeftRightImagesContainer>
       </LeftImages>
       <Plus to="/upload">+</Plus>
@@ -121,8 +107,8 @@ export const MidSection = () => (
     <SectionRight>
       <Title>We create</Title>
       <Text>
-        A post on Instagram showing your finished design and the instruction
-        pictures. Each post includes an illustration we make for your design!
+        A post on Instagram showing your finished design, the instructions and a
+        unique illustration we make for you!
       </Text>
       <RightImages>
         <RightLeftImageContainer>

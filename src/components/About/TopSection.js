@@ -44,10 +44,17 @@ export const TopSection = () => (
         Planet Joy, the world that has always been there, in our homes, right in
         front of us. We were just too busy to see it. Every week, new exciting
         creatures, unique buildings and objects that make Joy so special, will
-        be released on <a href="https://instagram.com">Instagram</a> and here.
-        You can check out the instructions and build them yourself. Use any
-        material you have, even waste is great! Just don’t forget to share a
-        snap of your creation!
+        be released on{" "}
+        <a
+          href="https://www.instagram.com/the_planetjoy/"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>{" "}
+        and here. You can check out the instructions and build them yourself.
+        Use any material you have, even waste is great! Just don’t forget to
+        share a snap of your creation!
       </MainText>
     </SectionLeft>
 
