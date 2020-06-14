@@ -94,7 +94,8 @@ export const TextAreaBottom = styled.div`
 
 export const MultipleImagesWrapper = styled.div`
   width: 100%;
-  height: 50%;
+  /* max-height: 100px; */
+  background: red;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -103,11 +104,7 @@ export const MultipleImagesWrapper = styled.div`
   grid-row-gap: 30px;
 
   > div {
-    flex: 1;
     width: 100%;
-    :not(:last-of-type) {
-      margin-right: 30px;
-    }
   }
 `
 

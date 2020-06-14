@@ -13,11 +13,13 @@ import {
   Submit,
   PrivacyPolicy,
   MultipleImagesWrapper,
+  MultipleImagesWrapperWrapper,
   TextAreaWrapper,
   ErrorMessage,
   TextArea,
   TextAreaBottom,
   LoadingStatus,
+
 } from "./Form.styled"
 import { SuccessStatus } from "./SuccessStatus"
 import useNetlifyForm from "./useNetlifyForm"
@@ -145,70 +147,72 @@ export const ContactForm = () => {
           )}
         </FormGroup>
 
-        <FormGroup css="justify-content: flex-end;">
+        <FormGroup css="max-height: 30px;">
           <Label htmlFor="multiplePictures">
             Upload up to 4 pictures of how to build your design. They will be
             used as instructions, so make them as clear as you can!
           </Label>
-          <MultipleImagesWrapper>
-            <div>
-              <PictureUpload
-                file={values.buildPicture1}
-                fieldName="buildPicture1"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-            <div>
-              <PictureUpload
-                file={values.buildPicture2}
-                fieldName="buildPicture2"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-            <div>
-              <PictureUpload
-                file={values.buildPicture3}
-                fieldName="buildPicture3"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-            <div>
-              <PictureUpload
-                file={values.buildPicture4}
-                fieldName="buildPicture4"
-                setFieldValue={setFieldValue}
-              />
-            </div>
+          <MultipleImagesWrapperWrapper>
+            <MultipleImagesWrapper>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture1}
+                  fieldName="buildPicture1"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture2}
+                  fieldName="buildPicture2"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture3}
+                  fieldName="buildPicture3"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture4}
+                  fieldName="buildPicture4"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
 
-            <div>
-              <PictureUpload
-                file={values.buildPicture4}
-                fieldName="buildPicture4"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-            <div>
-              <PictureUpload
-                file={values.buildPicture4}
-                fieldName="buildPicture4"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-            <div>
-              <PictureUpload
-                file={values.buildPicture4}
-                fieldName="buildPicture4"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-            <div>
-              <PictureUpload
-                file={values.buildPicture4}
-                fieldName="buildPicture4"
-                setFieldValue={setFieldValue}
-              />
-            </div>
-          </MultipleImagesWrapper>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture5}
+                  fieldName="buildPicture5"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture6}
+                  fieldName="buildPicture6"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture7}
+                  fieldName="buildPicture7"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture8}
+                  fieldName="buildPicture8"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+            </MultipleImagesWrapper>
+          </MultipleImagesWrapperWrapper>
         </FormGroup>
       </Main>
 

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Lottie from "react-lottie"
 import { Link } from "gatsby"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
 import {
@@ -11,18 +12,18 @@ import {
   ImageMidRight1,
   ImageMidRight2,
 } from "./AboutImages"
+import animationData from "./animation.json"
 
 const Title = styled.h1`
   font-size: 54px;
-  font-weight: 200;
+  font-weight: bold;
   flex: 1;
   display: flex;
   flex-direction: column;
 `
 
 const Text = styled.p`
-  font-size: 16px;
-  max-width: 450px;
+  max-width: 350px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -61,8 +62,8 @@ const LeftLeftImageContainer = styled.div`
 const LeftRightImagesContainer = styled.div`
   display: grid;
   flex: 1;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
   grid-row-gap: 30px;
   margin-top: 40px;
 `
@@ -83,8 +84,17 @@ const RightRightImageContainer = styled.div`
   flex: 1;
 `
 
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+}
+
 export const MidSection = () => (
-  <Section css="margin-bottom: 0 !important">
+  <Section css="margin-top: 100px !important; margin-bottom: 0 !important">
     <SectionLeft>
       {/* <div> */}
       <Title>You upload</Title>
@@ -103,6 +113,10 @@ export const MidSection = () => (
           <ImageMidLeft2 />
           <ImageMidLeft3 />
           <ImageMidLeft4 />
+          <ImageMidLeft1 />
+          <ImageMidLeft2 />
+          <ImageMidLeft3 />
+          <ImageMidLeft4 />
         </LeftRightImagesContainer>
       </LeftImages>
       <Plus to="/upload">+</Plus>
@@ -116,10 +130,10 @@ export const MidSection = () => (
       </Text>
       <RightImages>
         <RightLeftImageContainer>
-          <ImageMidRight1 />
+          <Lottie options={defaultOptions} height="100%" width="100%" />
         </RightLeftImageContainer>
         <RightRightImageContainer>
-          <ImageMidRight2 />
+          {/* <ImageMidRight2 /> */}
         </RightRightImageContainer>
       </RightImages>
       <Plus to="/upload">+</Plus>

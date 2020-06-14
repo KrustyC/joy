@@ -46,6 +46,7 @@ const Download = styled.p`
   margin-top: 10px;
   font-size: 12px;
   text-transform: uppercase;
+  letter-spacing: 2px;
   font-weight: bold;
 
   a {
@@ -54,8 +55,8 @@ const Download = styled.p`
     text-decoration: none;
     color: black;
 
-    >:first-child {
-      margin-right: 5px;
+    > :first-child {
+      margin-right: 8px;
     }
   }
 `

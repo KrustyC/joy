@@ -34,7 +34,7 @@ const From = () => {
             to make a printable version of the instructions! Make sure
             everything fits within 10MB.
           </Text>
-          <ContactForm />
+          {/* <ContactForm /> */}
         </Main>
         <Footer />
       </Wrapper>
