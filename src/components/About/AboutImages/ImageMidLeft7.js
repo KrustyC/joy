@@ -8,10 +8,10 @@ const Image = styled(Img)`
   height: auto !important;
 `
 
-export const ImageMidLeft = () => {
+export const ImageMidLeft7 = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "about-mid-left.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "about-mid-left-7.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid

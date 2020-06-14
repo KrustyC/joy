@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
 import {
   ImageBottomLeft1,
   ImageBottomRight1,
-  ImageBottomRight2,
 } from "./AboutImages"
 import UploadADesign from "./UploadADesign"
 
@@ -26,22 +26,28 @@ const RightImages = styled.div`
 
 const RightLeftImageContainer = styled.div`
   height: 500px;
-  width: 100%;
+  width: 60%;
   margin-right: 50px;
 `
 
-const RightRightImageContainer = styled.div`
-  height: 100%;
-  width: 100%;
-`
-
 const CTA = styled.div`
-  background: purple;
-
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const CTALink = styled(Link)`
+  min-width: 120px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:active,
+  :focus,
+  :visited {
+    text-decoration: none;
+    color: black;
+  }
 `
 
 export const BottomSection = () => (
@@ -59,20 +65,20 @@ export const BottomSection = () => (
 
       <SectionRight>
         <Text>
-          You can also include a pattern to cut or any element to assemble, if
-          your design has one! Don’t worry if you don’t have it!
+          A printable version of the post. In case you have uploaded a pattern,
+          we{"'"}ll create one extra page for it.
         </Text>
         <RightImages>
           <RightLeftImageContainer>
             <ImageBottomRight1 />
           </RightLeftImageContainer>
-
-          {/* <RightRightImageContainer /> */}
         </RightImages>
       </SectionRight>
     </Section>
     <CTA>
-      <UploadADesign />
+      <CTALink to="/upload">
+        <UploadADesign />
+      </CTALink>
     </CTA>
   </>
 )

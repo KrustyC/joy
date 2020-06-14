@@ -9,8 +9,10 @@ import {
   ImageMidLeft2,
   ImageMidLeft3,
   ImageMidLeft4,
-  ImageMidRight1,
-  ImageMidRight2,
+  ImageMidLeft5,
+  ImageMidLeft6,
+  ImageMidLeft7,
+  ImageMidLeft8,
 } from "./AboutImages"
 import animationData from "./animation.json"
 
@@ -55,39 +57,34 @@ const LeftImages = styled.div`
 const LeftLeftImageContainer = styled.div`
   display: flex;
   flex: 1;
-  margin-right: 30px;
-  margin-top: 40px;
+  margin-right: 10px;
+  margin-top: 30px;
 `
 
 const LeftRightImagesContainer = styled.div`
   display: grid;
-  flex: 1;
+  flex: 2;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 30px;
-  margin-top: 40px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 30px;
 `
 
 const RightImages = styled.div`
   width: 100%;
-  height: 370px;
   display: flex;
   flex: 8;
 `
 
 const RightLeftImageContainer = styled.div`
-  margin-right: 30px;
-  flex: 1;
-`
-
-const RightRightImageContainer = styled.div`
-  flex: 1;
+  width: 200px;
 `
 
 const defaultOptions = {
   loop: true,
   autoplay: true,
   animationData: animationData,
+  scaleType: "centerCrop",
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },
@@ -96,13 +93,12 @@ const defaultOptions = {
 export const MidSection = () => (
   <Section css="margin-top: 100px !important; margin-bottom: 0 !important">
     <SectionLeft>
-      {/* <div> */}
       <Title>You upload</Title>
       <Text>
         A picture of your finished design with its name, a brief story and up to
-        4 instruction photos to build it.
+        8 instruction photos to build it.
       </Text>
-      {/* </div> */}
+
       <LeftImages>
         <LeftLeftImageContainer>
           <ImageMidLeft />
@@ -113,10 +109,10 @@ export const MidSection = () => (
           <ImageMidLeft2 />
           <ImageMidLeft3 />
           <ImageMidLeft4 />
-          <ImageMidLeft1 />
-          <ImageMidLeft2 />
-          <ImageMidLeft3 />
-          <ImageMidLeft4 />
+          <ImageMidLeft5 />
+          <ImageMidLeft6 />
+          <ImageMidLeft7 />
+          <ImageMidLeft8 />
         </LeftRightImagesContainer>
       </LeftImages>
       <Plus to="/upload">+</Plus>
@@ -130,11 +126,8 @@ export const MidSection = () => (
       </Text>
       <RightImages>
         <RightLeftImageContainer>
-          <Lottie options={defaultOptions} height="100%" width="100%" />
+          <Lottie options={defaultOptions} height={295} width={220} />
         </RightLeftImageContainer>
-        <RightRightImageContainer>
-          {/* <ImageMidRight2 /> */}
-        </RightRightImageContainer>
       </RightImages>
       <Plus to="/upload">+</Plus>
     </SectionRight>

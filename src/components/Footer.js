@@ -60,7 +60,7 @@ export const Footer = () => (
           <a href="mailto:spreadonejoy@gmail.com">spreadonejoy@gmail.com</a>
         </span>
         <span>
-          Built by{" "}
+          built by{" "}
           <a href="https://dcrestini.me" rel="noopener noreferrer">
             Davide Crestini
           </a>
