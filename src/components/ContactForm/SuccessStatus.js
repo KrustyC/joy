@@ -28,7 +28,7 @@ export const SuccessStatus = ({ onReset }) => (
   <>
     <Text>
       Thank you so much for uploading your wonderful creation. We will review
-      you and post it as soon as possible!
+      and post it as soon as possible!
     </Text>
     <Container>
       <CTA onClick={onReset}>Upload another</CTA>
