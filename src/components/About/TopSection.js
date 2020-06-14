@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
 
 const MainText = styled.p`
-  font-size: 29px;
+  font-size: 32px;
   font-weight: 600;
 
   a {
@@ -31,6 +31,10 @@ const TopRightListItem = styled.div`
     font-size: 24px;
     margin: 0;
     margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 20px;
   }
 `
 export const TopSection = () => (

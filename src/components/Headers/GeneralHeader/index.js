@@ -36,7 +36,6 @@ const RightSideLink = styled(Link)`
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 120px;
   align-items: center;
   justify-content: flex-end;
   text-decoration: none;
@@ -62,7 +61,7 @@ const GeneralHeader = ({ siteTitle, uploadADesignLink }) => (
             <UploadADesign />
           </RightSideLink>
         )}
-        <RightSideLink to="/">
+        <RightSideLink css="margin-left: 50px;" to="/">
           <BackButtonImg />
         </RightSideLink>
       </RightSide>

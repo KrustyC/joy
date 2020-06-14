@@ -2,10 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Section, SectionLeft, SectionRight } from "./About.styled"
-import {
-  ImageBottomLeft1,
-  ImageBottomRight1,
-} from "./AboutImages"
+import { ImageBottomLeft1, ImageBottomRight1 } from "./AboutImages"
 import UploadADesign from "./UploadADesign"
 
 const Text = styled.p`
@@ -13,6 +10,8 @@ const Text = styled.p`
   max-width: 350px;
   display: flex;
   flex-direction: column;
+
+  font-size: 20px;
 `
 
 const LeftImageContainer = styled.div`

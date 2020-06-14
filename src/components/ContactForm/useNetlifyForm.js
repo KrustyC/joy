@@ -55,11 +55,9 @@ const useNetlifyForm = () => {
       }
 
       await fetch("/", options)
-      console.log("SUCCESS")
 
       dispatch({ type: "success", payload: true })
     } catch (error) {
-      console.log("error", error)
       dispatch({
         type: "error",
         payload: "Oops! An error happened, please try again later!",

@@ -48,8 +48,6 @@ export const ContactForm = () => {
     return <SuccessStatus onReset={onReset} />
   }
 
-  console.log(values.mainPicture, errors)
-
   return (
     <>
       <Text>

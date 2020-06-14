@@ -16,6 +16,7 @@ const Main = styled.div`
 
 const Text = styled.div`
   width: 60vw;
+  font-size: 20px !important;
 `
 
 const PrivacyPolicyPage = ({ data }) => {
