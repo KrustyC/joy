@@ -54,19 +54,6 @@ export const Projects = () => {
           </Card.Download>
         </Card>
       ))}
-      {projects.map(project => (
-        <Card>
-          <Card.ImageContainer>
-            <Card.ImageContainer.Image src={project.image} />
-          </Card.ImageContainer>
-
-          <Card.Title>{project.title}</Card.Title>
-          <Card.Author>
-            by <b>{project.author}</b>
-          </Card.Author>
-          <Card.Description>{project.description}</Card.Description>
-        </Card>
-      ))}
     </Grid>
   )
 }

@@ -54,8 +54,6 @@ const useNetlifyForm = () => {
         }),
       }
 
-      console.log("Submit with", options)
-
       await fetch("/", options)
       console.log("SUCCESS")
 
@@ -71,7 +69,9 @@ const useNetlifyForm = () => {
     dispatch({ type: "pending", payload: false })
   }
 
-  return [state, onSubmit]
+  const onResetNetlifyForm = () => dispatch({ type: "success", payload: false })
+
+  return [state, onSubmit, onResetNetlifyForm]
 }
 
 export default useNetlifyForm

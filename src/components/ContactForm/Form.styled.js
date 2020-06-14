@@ -1,5 +1,12 @@
 import styled from "styled-components"
 
+export const Text = styled.h3`
+  margin-bottom: 50px;
+  font-size: 30px;
+  max-width: 600px;
+  line-height: 40px;
+`
+
 export const Form = styled.form`
   margin-top: 100px;
   display: grid;
@@ -92,16 +99,17 @@ export const TextAreaBottom = styled.div`
   margin-top: -15px;
 `
 
+export const MultipleImagesWrapperWrapper = styled.div`
+`
+
 export const MultipleImagesWrapper = styled.div`
-  width: 100%;
-  /* max-height: 100px; */
-  background: red;
+  width: 50%;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 
   > div {
     width: 100%;

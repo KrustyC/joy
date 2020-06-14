@@ -15,7 +15,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   height: 100%;
   width: auto;
-  object-fit: cover;
+  object-fit: contain;
 `
 
 const Title = styled.h3`

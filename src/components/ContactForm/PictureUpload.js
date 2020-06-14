@@ -38,11 +38,9 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  
 `
 
-export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
+export const PictureUpload = ({ file, fieldName, setFieldValue, onBlur }) => (
   <Container>
     {!file ? <Text>+</Text> : <Img src={URL.createObjectURL(file)} />}
 
@@ -50,9 +48,8 @@ export const PictureUpload = ({ file, fieldName, setFieldValue }) => (
       id={fieldName}
       name={fieldName}
       type="file"
-      onChange={event => {
-        setFieldValue(fieldName, event.currentTarget.files[0])
-      }}
+      onChange={event => setFieldValue(fieldName, event.currentTarget.files[0])}
+      onBlur={() => onBlur && onBlur()}
     />
   </Container>
 )

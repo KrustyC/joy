@@ -20,10 +20,11 @@ const validationSchema = Yup.object({
   instagram: Yup.string().url(
     "Please add a n instagram link in the form of http://instagram.com/username"
   ),
+  mainPicture: Yup.mixed().required("Please add an image of your design"),
   designName: Yup.string().required("Please add a name for your design"),
-  description: Yup.string().required(
-    "Please add a description for your design"
-  ),
+  description: Yup.string()
+    .max(260, "Please keep the description below 260 characters")
+    .required("Please add a description for your design"),
   blueprint: Yup.string(),
   privacyPolicy: Yup.bool().oneOf(
     [true],

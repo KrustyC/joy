@@ -13,13 +13,7 @@ const Main = styled.div`
   margin: 0 auto;
   margin-bottom: 50px;
   font-size: 30px;
-`
-
-const Text = styled.h3`
-  margin-bottom: 50px;
-  font-size: 30px;
-  max-width: 600px;
-  line-height: 40px;
+  min-height: 60vh;
 `
 
 const From = () => {
@@ -29,12 +23,7 @@ const From = () => {
       <Wrapper>
         <Header />
         <Main>
-          <Text>
-            Everything that you upload here will be posted on Instagram and used
-            to make a printable version of the instructions! Make sure
-            everything fits within 10MB.
-          </Text>
-          {/* <ContactForm /> */}
+          <ContactForm />
         </Main>
         <Footer />
       </Wrapper>
