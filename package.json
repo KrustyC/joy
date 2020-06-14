@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Davide Crestini <davide.crestini94@gmail.com>",
   "dependencies": {
+    "@uppy/core": "^1.11.0",
+    "@uppy/react": "^1.8.0",
     "babel-plugin-styled-components": "^1.10.7",
     "formik": "^2.1.4",
     "framer-motion": "^1.11.0",

@@ -64,7 +64,7 @@ const useNetlifyForm = () => {
       })
     }
 
-    dispatch({ type: "pending", payload: false })
+    // dispatch({ type: "pending", payload: false })
   }
 
   const onResetNetlifyForm = () => dispatch({ type: "success", payload: false })

@@ -258,6 +258,8 @@ export const ContactForm = () => {
         <Bottom align="left">
           <Label as="span">
             We will publish your design as soon as possible.
+            <br />
+            Don{"'"}t worry, it may take a while to upload.
           </Label>
           <PrivacyPolicy>
             <input
