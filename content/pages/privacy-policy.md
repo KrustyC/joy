@@ -15,10 +15,14 @@ text: >-
 
 
 
+
+
   **Consent**
 
 
   By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+
+
 
 
 
@@ -30,6 +34,8 @@ text: >-
 
 
   For more general information on cookies, please read "What Are Cookies".
+
+
 
 
 
@@ -48,6 +54,8 @@ text: >-
 
 
 
+
+
   **Third Party Privacy Policies** 
 
 
@@ -55,6 +63,8 @@ text: >-
 
 
   You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
+
+
 
 
 
@@ -99,6 +109,8 @@ text: >-
 
 
   If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+
+
 
 
 
