@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { isMobile } from "react-device-detect"
 import { useCycle } from "framer-motion"
+import { isMobile } from "react-device-detect"
 import InitialOverlay from "./InitialOverlay"
-import { MobileLayout } from "./Mobile/Layout"
 
 const LayoutContainer = styled.div`
   opacity: ${({ show }) => (show ? 1 : 0)};
@@ -13,14 +12,20 @@ const LayoutContainer = styled.div`
 const Layout = ({ children }) => {
   const [isVisible, onCycle] = useCycle(true, false)
 
-  if (isMobile) {
-    return <MobileLayout />
+  const onHide = () => {
+    if (isMobile) {
+      return
+    }
+
+    onCycle()
   }
 
   return (
     <>
-      <InitialOverlay isVisible={isVisible} onHide={onCycle} />
-      <LayoutContainer show={!isVisible}>{children}</LayoutContainer>
+      <InitialOverlay isVisible={isVisible} onHide={onHide} />
+      <LayoutContainer show={!isVisible}>
+        {!isMobile && children}
+      </LayoutContainer>
     </>
   )
 }

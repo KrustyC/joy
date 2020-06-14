@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Lottie from "react-lottie"
-import animationData from "./animation.json"
+import { isMobile } from "react-device-detect"
 import { motion, AnimatePresence } from "framer-motion"
+import browserAnimationData from "./browser-animation.json"
+import mobileAnimationData from "./mobile-animation.json"
 
 const InitialOverlayContainer = styled.div`
   position: fixed;
@@ -28,14 +30,10 @@ const InitialOverlayContainer = styled.div`
   }
 `
 
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: animationData,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-}
+const Text = styled.p`
+  font-size: 14px;
+  text-align: center;
+`
 
 const InitialOverlay = ({ isVisible, onHide }) => {
   return (
@@ -48,7 +46,35 @@ const InitialOverlay = ({ isVisible, onHide }) => {
           exit={{ opacity: 0 }}
         >
           <InitialOverlayContainer onClick={onHide}>
-            <Lottie options={defaultOptions} height="80%" width="80%" />
+            {!isMobile ? (
+              <Lottie
+                height="80%"
+                width="80%"
+                options={{
+                  loop: true,
+                  autoplay: true,
+                  animationData: browserAnimationData,
+                }}
+              />
+            ) : (
+              <Lottie
+                height={"100%"}
+                width="100%"
+                options={{
+                  loop: true,
+                  autoplay: true,
+                  animationData: mobileAnimationData,
+                }}
+              />
+            )}
+
+            {isMobile && (
+              <Text>
+                Hi, the mobile version of Joy is currently under development.
+                <br />
+                Please use a PC to view the website :)
+              </Text>
+            )}
           </InitialOverlayContainer>
         </motion.div>
       )}
