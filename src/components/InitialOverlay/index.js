@@ -4,7 +4,7 @@ import Lottie from "react-lottie"
 import { isMobile } from "react-device-detect"
 import { motion, AnimatePresence } from "framer-motion"
 import browserAnimationData from "./browser-animation.json"
-import mobileAnimationData from "./mobile-animation.json"
+import mobileAnimationData from "./mobile-animation-wait.json"
 
 const InitialOverlayContainer = styled.div`
   position: fixed;

@@ -171,16 +171,12 @@ export const ContactForm = () => {
             )}
           </FormGroup>
 
-          {/* <FormGroup css="flex-direction: column; justify-content: flex-end;"> */}
           <ImagesAndBlueprintWrapper>
             <FormGroup css="flex: 2; height: 100%;">
-              <Label
-                htmlFor="multiplePictures"
-                css="width: 350px; margin-top: -20px;"
-              >
+              <Label htmlFor="multiplePictures" css="width: 350px;">
                 Upload up to 8 clear pictures of how to build your design!
               </Label>
-              <MultipleImagesWrapper css="margin-top: 20px;">
+              <MultipleImagesWrapper>
                 <div>
                   <PictureUpload
                     file={values.buildPicture1}
@@ -241,10 +237,10 @@ export const ContactForm = () => {
               </MultipleImagesWrapper>
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="blueprint" css="margin-top: -20px;">
+              <Label htmlFor="blueprint">
                 If your design has a template, upload it as PDF in A4 format.
               </Label>
-              <div style={{ marginTop: "20px" }}>
+              <div>
                 <FileUpload
                   file={values.blueprint}
                   fieldName="blueprint"
