@@ -12,6 +12,7 @@
     "framer-motion": "^1.11.0",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
+    "gatsby-plugin-google-analytics": "^2.3.4",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-netlify-cms": "^4.2.4",
     "gatsby-plugin-offline": "^3.1.4",
