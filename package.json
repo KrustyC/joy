@@ -1,7 +1,7 @@
 {
-  "name": "planerjoy.co.uk",
+  "name": "theplanetjoy.com",
   "private": true,
-  "description": "Website for https://planetjoy.co.uk",
+  "description": "Website for https://theplanetjoy.com",
   "version": "0.1.0",
   "author": "Davide Crestini <davide.crestini94@gmail.com>",
   "dependencies": {
