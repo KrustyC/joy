@@ -15,9 +15,9 @@ export const Form = styled.form`
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "top-left top-center top-right"
-    "sidebar-top main main"
-    "sidebar-bottom main main"
-    "bottom-left bottom-left bottom-right";
+    "sidebar-top main-top main-top"
+    "sidebar-bottom main-bottom-left main-bottom-right"
+    "bottom bottom bottom";
 `
 
 const BaseArea = styled.div`
@@ -32,18 +32,20 @@ export const Top = styled(BaseArea)`
 
 export const Sidebar = styled(BaseArea)`
   grid-area: ${({ align }) => `sidebar-${align}`};
+
   width: 100%;
 `
 
 export const Main = styled(BaseArea)`
-  grid-area: main;
+  grid-area: ${({ align }) => `main-${align}`};
+
   display: flex;
   flex-direction: column;
   align-items: space-between;
 `
 
 export const Bottom = styled(BaseArea)`
-  grid-area: ${({ align }) => `bottom-${align}`};
+  grid-area: bottom;
   justify-content: space-between;
   align-items: space-between;
 `
@@ -97,12 +99,6 @@ export const TextAreaBottom = styled.div`
   padding: 0 5px;
   font-weight: bold;
   margin-top: -15px;
-`
-
-export const ImagesAndBlueprintWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 50%;
 `
 
 export const MultipleImagesWrapper = styled.div`

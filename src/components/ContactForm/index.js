@@ -15,7 +15,6 @@ import {
   Submit,
   PrivacyPolicy,
   MultipleImagesWrapper,
-  ImagesAndBlueprintWrapper,
   TextAreaWrapper,
   ErrorMessage,
   TextArea,
@@ -140,6 +139,7 @@ export const ContactForm = () => {
               your finished design
             </Label>
             <PictureUpload
+              big
               file={values.mainPicture}
               fieldName="mainPicture"
               setFieldValue={setFieldValue}
@@ -151,7 +151,7 @@ export const ContactForm = () => {
           </FormGroup>
         </Sidebar>
 
-        <Main>
+        <Main align="top">
           <FormGroup>
             <Label htmlFor="description">
               What is the story of your design?Try to give us details about
@@ -170,85 +170,86 @@ export const ContactForm = () => {
               <ErrorMessage>{errors.description}</ErrorMessage>
             )}
           </FormGroup>
-
-          <ImagesAndBlueprintWrapper>
-            <FormGroup css="flex: 2; height: 100%;">
-              <Label htmlFor="multiplePictures" css="width: 350px;">
-                Upload up to 8 clear pictures of how to build your design!
-              </Label>
-              <MultipleImagesWrapper>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture1}
-                    fieldName="buildPicture1"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture2}
-                    fieldName="buildPicture2"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture3}
-                    fieldName="buildPicture3"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture4}
-                    fieldName="buildPicture4"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture5}
-                    fieldName="buildPicture5"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture6}
-                    fieldName="buildPicture6"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture7}
-                    fieldName="buildPicture7"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-                <div>
-                  <PictureUpload
-                    file={values.buildPicture8}
-                    fieldName="buildPicture8"
-                    setFieldValue={setFieldValue}
-                  />
-                </div>
-              </MultipleImagesWrapper>
-            </FormGroup>
-            <FormGroup>
-              <Label htmlFor="blueprint">
-                If your design has a template, upload it as PDF in A4 format.
-              </Label>
+        </Main>
+        <Main align="bottom-left">
+          <FormGroup css="justify-content: flex-end;">
+            <Label htmlFor="multiplePictures" css="width: 350px;">
+              Upload up to 8 clear pictures of how to build your design!
+            </Label>
+            <MultipleImagesWrapper>
               <div>
-                <FileUpload
-                  file={values.blueprint}
-                  fieldName="blueprint"
+                <PictureUpload
+                  file={values.buildPicture1}
+                  fieldName="buildPicture1"
                   setFieldValue={setFieldValue}
                 />
               </div>
-            </FormGroup>
-          </ImagesAndBlueprintWrapper>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture2}
+                  fieldName="buildPicture2"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture3}
+                  fieldName="buildPicture3"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture4}
+                  fieldName="buildPicture4"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+
+              <div>
+                <PictureUpload
+                  file={values.buildPicture5}
+                  fieldName="buildPicture5"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture6}
+                  fieldName="buildPicture6"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture7}
+                  fieldName="buildPicture7"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+              <div>
+                <PictureUpload
+                  file={values.buildPicture8}
+                  fieldName="buildPicture8"
+                  setFieldValue={setFieldValue}
+                />
+              </div>
+            </MultipleImagesWrapper>
+          </FormGroup>
+        </Main>
+        <Main align="bottom-right">
+          <FormGroup css="justify-content: flex-end;">
+            <Label htmlFor="blueprint">
+              If your design has a template, upload it as PDF in A4 format.
+            </Label>
+            <div>
+              <FileUpload
+                file={values.blueprint}
+                fieldName="blueprint"
+                setFieldValue={setFieldValue}
+              />
+            </div>
+          </FormGroup>
         </Main>
 
         <Bottom align="left">

@@ -1,15 +1,22 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const Container = styled.label`
   position: relative;
-  width: 100%;
   border: 3px solid black;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100%;
+  height: 100px;
+  width: 100px;
+
+  ${({ big }) =>
+    big &&
+    css`
+      height: 370px;
+      width: 370px;
+    `}
 
   input {
     opacity: 0;
@@ -42,12 +49,13 @@ const Img = styled.img`
 
 export const PictureUpload = ({
   file,
+  big,
   fieldName,
   setFieldValue,
   onBlur,
   ...rest
 }) => (
-  <Container {...rest}>
+  <Container big={big}>
     {!file ? <Text>+</Text> : <Img src={URL.createObjectURL(file)} />}
 
     <input
