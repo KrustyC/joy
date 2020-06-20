@@ -6,25 +6,41 @@ const FooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+
   margin-top: 100px;
   font-weight: 700;
-
   font-size: 16px;
+
+  @media (min-width: 600px) {
+    height: 100px;
+  }
 `
 
 const InnerFooter = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
+
+  @media (min-width: 600px) {
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+  }
 `
 
 const Copy = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  align-items: flex-start;
   justify-content: flex-start;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
 
   > :not(:last-child) {
     margin-right: 40px;
@@ -38,8 +54,13 @@ const Copy = styled.div`
 
 const Links = styled.div`
   display: flex;
+  flex-direction: column;
   flex: 1;
   justify-content: flex-end;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
 
   > a {
     color: black;

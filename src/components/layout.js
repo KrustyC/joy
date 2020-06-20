@@ -13,9 +13,9 @@ const Layout = ({ children }) => {
   const [isVisible, onCycle] = useCycle(true, false)
 
   const onHide = () => {
-    if (isMobile) {
-      return
-    }
+    // if (isMobile) {
+    //   return
+    // }
 
     onCycle()
   }
@@ -24,7 +24,8 @@ const Layout = ({ children }) => {
     <>
       <InitialOverlay isVisible={isVisible} onHide={onHide} />
       <LayoutContainer show={!isVisible}>
-        {!isMobile && children}
+        {children}
+        {/* {!isMobile && children} */}
       </LayoutContainer>
     </>
   )

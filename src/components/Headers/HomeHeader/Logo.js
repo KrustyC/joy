@@ -6,6 +6,9 @@ import Img from "gatsby-image"
 const Image = styled(Img)`
   width: 300px;
   height: 80px;
+
+  width: 130px;
+  height: 90px;
 `
 
 const Logo = () => {

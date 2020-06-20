@@ -15,8 +15,12 @@ const Main = styled.div`
 `
 
 const Text = styled.div`
-  width: 60vw;
+  width: 100%;
   font-size: 20px !important;
+
+  @media (min-width: 600px) {
+    width: 60vw;
+  }
 `
 
 const PrivacyPolicyPage = ({ data }) => {
