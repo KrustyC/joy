@@ -172,10 +172,10 @@ export const LoadingStatus = styled.span`
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 4px solid #fff;
+    border: 4px solid ${({ color }) => color || "#fff"};
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
+    border-color: ${({ color }) => color || "#fff"} transparent transparent transparent;
 
     &:nth-child(1) {
       animation-delay: -0.45s;

@@ -1,5 +1,9 @@
 import React from "react"
 import styled, { css } from "styled-components"
+import { LoadingStatus } from "./Form.styled"
+
+const CLOUD_NAME = "dpwj0qz0d"
+const CLOUDINARY_UPLOAD_PRESET = "n4ayy5mq"
 
 const Container = styled.label`
   position: relative;
@@ -54,16 +58,63 @@ export const PictureUpload = ({
   setFieldValue,
   onBlur,
   ...rest
-}) => (
-  <Container big={big}>
-    {!file ? <Text>+</Text> : <Img src={URL.createObjectURL(file)} />}
+}) => {
+  const [pending, setPending] = React.useState(false)
 
-    <input
-      id={fieldName}
-      name={fieldName}
-      type="file"
-      onChange={event => setFieldValue(fieldName, event.currentTarget.files[0])}
-      onBlur={() => onBlur && onBlur()}
-    />
-  </Container>
-)
+  const onPhotoSelected = event => {
+    const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/upload`
+    setPending(true)
+    const formData = new FormData()
+    formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET)
+    formData.append("file", event.currentTarget.files[0])
+
+    fetch(url, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      body: formData,
+    })
+      .then(res => res.json())
+      .then(res => {
+        setFieldValue(fieldName, res.url)
+      })
+      .catch(err => {
+        console.log("ERROR", err)
+      })
+      .finally(() => setPending(false))
+  }
+
+  console.log(file)
+
+  return (
+    <Container big={big}>
+      {!file ? (
+        <Text>
+          {pending ? (
+            <LoadingStatus color="#ff958c">
+              <div />
+              <div />
+              <div />
+              <div />
+            </LoadingStatus>
+          ) : (
+            "+"
+          )}
+        </Text>
+      ) : (
+        <Img src={file} />
+      )}
+
+      <input
+        id={fieldName}
+        name={fieldName}
+        type="file"
+        accept="image/*"
+        multiple="multiple"
+        onChange={onPhotoSelected}
+        onBlur={() => onBlur && onBlur()}
+      />
+    </Container>
+  )
+}
