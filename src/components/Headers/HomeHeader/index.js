@@ -4,21 +4,8 @@ import { Link } from "gatsby"
 import { isMobile } from "react-device-detect"
 import Logo from "./Logo"
 import About from "./About"
-
-const HeaderWrapper = styled.div`
-  height: 150px;
-  margin-bottom: 70px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-`
-
-const InnerHeader = styled.div`
-  width: ${({ theme }) => theme.sizes.desktop.mainArea};
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-`
+import { Burger } from "../Burger"
+import { HeaderWrapper, InnerHeader } from "../Header.styled"
 
 const LeftLink = styled(Link)`
   display: flex;
@@ -56,13 +43,10 @@ const Header = () => (
       <LeftLink to="/">
         <Logo />
       </LeftLink>
+
       {isMobile ? (
         <Links>
-          <StyledLink to="/about">About</StyledLink>
-          <StyledA href="https://www.instagram.com/the_planetjoy/">
-            Instagram
-          </StyledA>
-          <StyledLink to="/privacy-policy">Privacy</StyledLink>
+          <Burger />
         </Links>
       ) : (
         <RightLink to="/about">

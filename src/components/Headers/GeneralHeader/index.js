@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { isMobile } from "react-device-detect"
 import Logo from "./Logo"
+import { Burger } from "../Burger"
 import BackButtonImg from "./BackButtonImg"
 import UploadADesign from "./UploadADesign"
 
@@ -78,8 +79,7 @@ const GeneralHeader = ({ siteTitle, uploadADesignLink }) => (
       <RightSide>
         {isMobile ? (
           <Links>
-            <StyledLink to="/">Back</StyledLink>
-            <StyledLink to="/upload">Upload</StyledLink>
+            <Burger />
           </Links>
         ) : (
           <>

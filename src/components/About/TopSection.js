@@ -5,6 +5,7 @@ import { Section, SectionLeft, SectionRight } from "./About.styled"
 const MainText = styled.p`
   font-size: 32px;
   font-weight: 600;
+  line-height: 42px;
 
   a {
     color: black;
