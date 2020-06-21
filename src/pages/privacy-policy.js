@@ -8,6 +8,7 @@ import { Footer } from "../components/Footer"
 
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.privacyPolicyPage};
+  padding-bottom: 50px;
 `
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
@@ -17,7 +18,6 @@ const Main = styled.div`
 const Text = styled.div`
   width: 100%;
   font-size: 20px !important;
-
   @media (min-width: 600px) {
     width: 60vw;
   }

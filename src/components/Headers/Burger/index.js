@@ -23,7 +23,9 @@ const links = [
   },
 ]
 
-const Div = styled.div``
+const Div = styled.div`
+  
+`
 
 const Overlay = styled.div`
   position: fixed;
@@ -38,6 +40,7 @@ const Overlay = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 10px;
 `
 
 const StyledA = styled.a`
@@ -70,7 +73,7 @@ const Li = styled.li`
 
 const NavIcon = styled.div`
   margin: 1em;
-  width: 40px;
+  width: 30px;
 
   &:after,
   &:before,

@@ -30,7 +30,7 @@ const validationSchema = Yup.object({
 const useContactForm = onSubmit => {
   const contactForm = useFormik({
     validationSchema,
-    isInitialValid: false,
+    validateOnMount: true,
     initialValues,
     onSubmit,
   })

@@ -37,7 +37,7 @@ const MobileViewContainer = styled.div`
 `
 
 const MobileCreatureContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 20px;
 `
 
 const MobileText = styled.p`

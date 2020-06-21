@@ -36,13 +36,6 @@ const Links = styled.div`
   justify-content: flex-start;
 `
 
-const StyledLink = styled(Link)`
-  text-transform: uppercase;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-`
-
 const RightSide = styled.div`
   display: flex;
   height: 100%;

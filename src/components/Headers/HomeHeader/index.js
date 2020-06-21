@@ -18,19 +18,6 @@ const Links = styled.div`
   align-items: flex-end;
 `
 
-const StyledLink = styled(Link)`
-  text-transform: uppercase;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-`
-const StyledA = styled.a`
-  text-transform: uppercase;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-`
-
 const RightLink = styled(Link)`
   flex: 1;
   display: flex;
