@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
+import { isMobile } from "react-device-detect"
 import { GeneralHeader as Header } from "../components/Headers"
 import { AboutComponent } from "../components/About"
 import { Footer } from "../components/Footer"
@@ -12,7 +13,6 @@ const Wrapper = styled.div`
 const Main = styled.div`
   max-width: ${({ theme }) => theme.sizes.desktop.mainArea};
   margin: 0 auto;
-  margin-bottom: 50px;
 `
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
         <Main>
           <AboutComponent />
         </Main>
-        <Footer />
+        {!isMobile && <Footer />}
       </Wrapper>
     </>
   )

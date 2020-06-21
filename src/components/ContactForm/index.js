@@ -134,7 +134,7 @@ export const ContactForm = () => {
 
         <Sidebar align="bottom">
           <FormGroup>
-            <Label as="span">
+            <Label as="span" css="color: #000000 !important;">
               Upload a picture of <br />
               your finished design
             </Label>
@@ -173,7 +173,7 @@ export const ContactForm = () => {
         </Main>
         <Main align="bottom-left">
           <FormGroup css="justify-content: flex-end;">
-            <Label htmlFor="multiplePictures" css="width: 350px;">
+            <Label htmlFor="multiplePictures" css="width: 100%;">
               Upload up to 8 clear pictures of how to build your design!
             </Label>
             <MultipleImagesWrapper>
@@ -240,7 +240,7 @@ export const ContactForm = () => {
         <Main align="bottom-right">
           <FormGroup css="justify-content: flex-end;">
             <Label htmlFor="blueprint">
-              If your design has a template, upload it as PDF in A4 format.
+              Upload a PDF template in A4 format.
             </Label>
             <div>
               <FileUpload
@@ -253,7 +253,7 @@ export const ContactForm = () => {
         </Main>
 
         <Bottom align="left">
-          <Label as="span">
+          <Label as="span" css="color: #000000 !important;">
             We will publish your design as soon as possible.
             <br />
             Don{"'"}t worry, it may take a while to upload.

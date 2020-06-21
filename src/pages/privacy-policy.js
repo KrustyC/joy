@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
+import { isMobile } from "react-device-detect"
 import { GeneralHeader as Header } from "../components/Headers"
 import { Markdown } from "../components/Markdown"
 import { Footer } from "../components/Footer"
@@ -11,7 +12,6 @@ const Wrapper = styled.div`
 const Main = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
   margin: 0 auto;
-  margin-bottom: 50px;
 `
 
 const Text = styled.div`
@@ -37,7 +37,7 @@ const PrivacyPolicyPage = ({ data }) => {
             <Markdown md={text} />
           </Text>
         </Main>
-        <Footer />
+        {!isMobile && <Footer />}
       </Wrapper>
     </>
   )

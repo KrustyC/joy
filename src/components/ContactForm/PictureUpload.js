@@ -12,14 +12,14 @@ const Container = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
 
   ${({ big }) =>
     big &&
     css`
       height: 370px;
-      width: 370px;
+      width: 100%;
     `}
 
   input {
@@ -80,12 +80,9 @@ export const PictureUpload = ({
         setFieldValue(fieldName, res.url)
       })
       .catch(err => {
-        console.log("ERROR", err)
       })
       .finally(() => setPending(false))
   }
-
-  console.log(file)
 
   return (
     <Container big={big}>

@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 const Container = styled.label`
   position: relative;
-  width: 180px;
-  min-height: 245px;
+  width: 192px;
+  min-height: 270px;
   border: 3px solid black;
   background: white;
   display: flex;

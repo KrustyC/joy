@@ -3,7 +3,9 @@ import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Layout from "./src/components/layout"
 
 const GlobalStyle = createGlobalStyle`
-  
+  h1, h2, h3, h4, h5,h6, p, label {
+    color: #000000 !important;
+  }
 `
 
 const theme = {

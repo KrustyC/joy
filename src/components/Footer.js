@@ -7,7 +7,7 @@ const FooterContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-top: 100px;
+  margin-top: 70px;
   font-weight: 700;
   font-size: 16px;
 
@@ -31,6 +31,7 @@ const InnerFooter = styled.div`
 `
 
 const Copy = styled.div`
+  color: #000000;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -54,6 +55,7 @@ const Copy = styled.div`
 
 const Links = styled.div`
   display: flex;
+  color: #000000;
   flex-direction: column;
   flex: 1;
   justify-content: flex-end;

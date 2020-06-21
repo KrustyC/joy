@@ -23,6 +23,7 @@ const Title = styled.h3`
 `
 
 const Author = styled.span`
+  color: ${({ theme }) => theme.colors.text};
   font-size: 12px;
 
   b {
