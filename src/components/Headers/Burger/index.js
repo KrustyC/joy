@@ -109,7 +109,8 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 20px;
   text-align: left;
   width: 88vw;
 
@@ -119,7 +120,7 @@ const Copy = styled.div`
   }
 `
 
-export const Burger = ({ overlay }) => {
+export const Burger = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const onToggle = () => setIsOpen(!isOpen)
