@@ -20,13 +20,14 @@ const InnerFooter = styled.div`
   width: ${({ theme }) => theme.sizes.desktop.mainArea};
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 15px 0;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    height: 100px;
   }
 `
 
@@ -57,7 +58,6 @@ const Links = styled.div`
   display: flex;
   color: #000000;
   flex-direction: column;
-  flex: 1;
   justify-content: flex-end;
 
   @media (min-width: 600px) {

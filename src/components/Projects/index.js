@@ -7,12 +7,20 @@ import Icon from "./Icon"
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  grid-column-gap: 60px;
 
   @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1280px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  grid-column-gap: 100px;
   grid-row-gap: 10px;
 `
 
