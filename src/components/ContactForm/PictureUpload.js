@@ -19,7 +19,7 @@ const Container = styled.label`
     big &&
     css`
       height: 370px;
-      width: 100%;
+      width: 364px;
     `}
 
   input {
@@ -79,8 +79,7 @@ export const PictureUpload = ({
       .then(res => {
         setFieldValue(fieldName, res.url)
       })
-      .catch(err => {
-      })
+      .catch(err => {})
       .finally(() => setPending(false))
   }
 

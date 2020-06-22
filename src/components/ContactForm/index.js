@@ -138,6 +138,7 @@ export const ContactForm = () => {
               Upload a picture of <br />
               your finished design
             </Label>
+
             <PictureUpload
               big
               file={values.mainPicture}
@@ -145,6 +146,7 @@ export const ContactForm = () => {
               setFieldValue={setFieldValue}
               onBlur={() => setFieldTouched("mainPicture")}
             />
+
             {errors.mainPicture && touched.mainPicture && (
               <ErrorMessage>{errors.mainPicture}</ErrorMessage>
             )}
