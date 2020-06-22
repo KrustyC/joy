@@ -133,7 +133,7 @@ export const ContactForm = () => {
         </Sidebar>
 
         <Sidebar align="bottom">
-          <FormGroup>
+          <FormGroup css="align-items: flex-start; justify-content: flex-end;">
             <Label as="span" css="color: #000000 !important;">
               Upload a picture of <br />
               your finished design

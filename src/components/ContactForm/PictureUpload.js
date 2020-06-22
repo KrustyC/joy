@@ -12,14 +12,24 @@ const Container = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
-  width: 130px;
+  height: 80px;
+  width: 80px;
+
+  @media (min-width: 1280px) {
+    height: 150px;
+    width: 150px;
+  }
 
   ${({ big }) =>
     big &&
     css`
-      height: 370px;
-      width: 364px;
+      height: 270px;
+      width: 274px;
+
+      @media (min-width: 1280px) {
+        height: 370px;
+        width: 364px;
+      }
     `}
 
   input {
