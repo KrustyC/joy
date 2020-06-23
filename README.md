@@ -1,7 +1,7 @@
 # Joy
 Source code for the website 
 
-This website is developed for the project Joy.
+This website is developed for The Planet Joy.
 
 ## Architecture
 This website is developed using [Gatsby](https://www.gatsbyjs.org/) in sync with [Netlify](https://www.netlify.com) and [Netlify CMS](https://www.netlifycms.org/).
