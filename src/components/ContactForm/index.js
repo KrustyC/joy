@@ -136,7 +136,7 @@ export const ContactForm = () => {
           <FormGroup css="align-items: flex-start; justify-content: flex-end;">
             <Label as="span" css="color: #000000 !important;">
               Upload a picture of <br />
-              your finished design
+              your finished design.
             </Label>
 
             <PictureUpload
@@ -156,8 +156,8 @@ export const ContactForm = () => {
         <Main align="top">
           <FormGroup>
             <Label htmlFor="description">
-              What is the story of your design?Try to give us details about
-              where it lives and what it does on Planet Joy!
+              What is the story of your design? Try to give us details about
+              where it lives and what it does on Planet Joy.
             </Label>
             <TextAreaWrapper>
               <TextArea
@@ -176,7 +176,7 @@ export const ContactForm = () => {
         <Main align="bottom-left">
           <FormGroup css="justify-content: flex-end;">
             <Label htmlFor="multiplePictures" css="width: 100%;">
-              Upload up to 8 clear pictures of how to build your design!
+              Upload up to 8 clear pictures of how to build your design.
             </Label>
             <MultipleImagesWrapper>
               <div>
