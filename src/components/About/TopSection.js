@@ -42,20 +42,20 @@ export const TopSection = () => (
   <Section>
     <SectionLeft>
       <MainText>
-        Planet Joy, the world that has always been there, in our homes, right in
-        front of us. We were just too busy to see it. Every week, new exciting
-        creatures, unique buildings and objects that make Joy so special, will
-        be released on{" "}
+        A world hiding in plain site. A world in our own homes that we’ve been 
+        too busy to notice. On Planet Joy, exciting creatures, unique buildings,
+        and strange objects sprout up all the time! These are what make Joy so 
+        special. With a little nudge, maybe you can see Planet Joy too. Each week,
+        new Creations will be released here and on{" "}
         <a
           href="https://www.instagram.com/the_planetjoy/"
           target="blank"
           rel="noopener noreferrer"
         >
-          Instagram
-        </a>{" "}
-        and here. You can check out the instructions and build them yourself.
-        Use any material you have, even waste is great! Just don’t forget to
-        share a snap of your creation!
+          Instagram.
+        </a>{" "} 
+        Check out the instructions and you can build them yourself! Use any material
+        you have—even waste is great! Just don’t forget to share a snap when you’re done.
       </MainText>
     </SectionLeft>
 
