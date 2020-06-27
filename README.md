@@ -1,4 +1,4 @@
-# Joy
+# The Planet Joy
 Source code for the website https://theplanetjoy.com
 
 This website is developed for The Planet Joy.
