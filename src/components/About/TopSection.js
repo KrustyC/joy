@@ -65,17 +65,15 @@ export const TopSection = () => (
           <h3>Who</h3>
           <p>
             Planet Joy is an open community of creatives. The goal is to produce
-            new exclusive material every week to help you spend your time
-            creatively during life at home.
+            new material every week to help you spend your time creatively at home.
           </p>
         </TopRightListItem>
 
         <TopRightListItem>
           <h3>Spread the Joy</h3>
           <p>
-            We hope Joy reaches as many people as possible. So why don’t you
-            print an extra set of instructions and bring it to a neighbour that
-            doesn’t use Instagram?
+            We hope Joy reaches as many people as possible. Why not print an extra
+            set of instructions and bring it to a neighbour that doesn’t use Instagram?
           </p>
         </TopRightListItem>
 
@@ -83,9 +81,9 @@ export const TopSection = () => (
           <h3>Join the Joy</h3>
           <p>
             If you’d like to join the community and populate Planet Joy, you can
-            upload pictures of how to make your design and even a blueprint of
-            it. We will post them on Instagram and create the printable version
-            to share with neighbours. Scroll down on this page to see some
+            upload pictures of your Creations and the designs of how to make it.
+            We will post these on Instagram and create printable versions to
+            share with anyone else. Scroll down on this page to see some
             examples!
           </p>
         </TopRightListItem>
