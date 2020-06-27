@@ -133,8 +133,8 @@ export const YouUpload = () => (
     </Instructions>
     <BluePrint>
       <Text>
-        You can also include a pattern to cut or any element to assemble, if
-        your design has one!
+        You can also include graphic elements or a foldable pattern to print
+        and cut out!
       </Text>
       <BlueprintImageContainer>
         <ImageBottomLeft1 />
