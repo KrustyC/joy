@@ -2,11 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { useCycle } from "framer-motion"
-import InitialOverlay from "./InitialOverlay"
-
-const LayoutContainer = styled.div`
-  opacity: ${({ show }) => (show ? 1 : 0)};
-`
+import InitialOverlay from "../InitialOverlay"
+import LayoutWithCookie from "./LayoutWithCookie"
 
 const Layout = ({ children }) => {
   const [isVisible, onCycle] = useCycle(true, false)
@@ -16,9 +13,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <InitialOverlay isVisible={isVisible} onHide={onHide} />
-      <LayoutContainer show={!isVisible}>
-        {children}
-      </LayoutContainer>
+      {!isVisible && <LayoutWithCookie>{children}</LayoutWithCookie>}
     </>
   )
 }

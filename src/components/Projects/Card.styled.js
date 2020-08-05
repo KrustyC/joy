@@ -43,7 +43,7 @@ const Description = styled.p`
   white-space: wrap;
 `
 
-const Download = styled.p`
+const Download = styled.div`
   margin-top: 10px;
   font-size: 12px;
   text-transform: uppercase;

@@ -49,8 +49,8 @@ export const Projects = () => {
 
   return (
     <Grid>
-      {projects.map(project => (
-        <Card>
+      {projects.map((project, i) => (
+        <Card key={i}>
           <Card.ImageContainer>
             <Card.ImageContainer.Image src={project.image} />
           </Card.ImageContainer>

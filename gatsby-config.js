@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: "cookie-banner-portal",
+        id: "cookie-banner-portal",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-169339487-1",
